@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/envoy/xds/</loc>
+    <lastmod>2020-02-29T19:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/</loc>
+    <lastmod>2020-02-29T19:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/envoy/</loc>
+    <lastmod>2020-02-29T19:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/practice/</loc>
+    <lastmod>2020-02-29T19:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/design/</loc>
+    <lastmod>2020-02-29T19:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/source/</loc>
+    <lastmod>2020-02-29T19:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/</loc>
+    <lastmod>2020-02-29T19:50:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/tags/</loc>
+  </url>
+  
+</urlset>
