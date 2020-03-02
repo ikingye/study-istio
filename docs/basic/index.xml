@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>第一部分 基础入门 on Istio 学习笔记</title>
+    <title>第一部分 基础 on Istio 学习笔记</title>
     <link>https://ikingye.github.io/study-istio/docs/basic/</link>
-    <description>Recent content in 第一部分 基础入门 on Istio 学习笔记</description>
+    <description>Recent content in 第一部分 基础 on Istio 学习笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     
 	<atom:link href="https://ikingye.github.io/study-istio/docs/basic/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>快速上手</title>
+      <link>https://ikingye.github.io/study-istio/docs/basic/quick-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/basic/quick-start/</guid>
+      <description>Istio 快速上手 官网：https://github.com/istio/istio
+架构 1.4 参考：https://istio.io/docs/ops/deployment/architecture
+概念 listener envoy 既然是 proxy，专门做转发，就得监听一个端口，接入请求，然后才能够根据策略转发，这个监听的地址称为 listener
+route cluster 由完全相同行为的多个 endpoint 组成，从 cluster 到 endpoint 的过程称为负载均衡。 cluster 里面配置负载均衡策略
+endpoint 目标的 ip 地址和端口，这个是 proxy 最终将请求转发到的地方
+静态配置的例子如下： 遥测（telemetry） </description>
+    </item>
     
   </channel>
 </rss>
