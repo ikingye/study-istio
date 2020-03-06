@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>快速上手 on Istio 学习笔记</title>
+    <link>https://ikingye.github.io/study-istio/docs/basic/quick-start/</link>
+    <description>Recent content in 快速上手 on Istio 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://ikingye.github.io/study-istio/docs/basic/quick-start/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>安装</title>
+      <link>https://ikingye.github.io/study-istio/docs/basic/quick-start/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/basic/quick-start/install/</guid>
+      <description>Istio 安装 快速安装（适合新人）  Download and install Istio Deploy the sample application Open the application to outside traffic View the dashboard  使用 Istioctl 进行安装 下载 Istio release [完成平台设置](platform-specific setup) Check the Requirements for Pods and Services Install Istio using the default profile </description>
+    </item>
+    
+  </channel>
+</rss>

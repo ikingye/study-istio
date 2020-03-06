@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="文章"><meta property="og:title" content="文章" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/appendix/article/" />
-
-<title>文章 | Istio 学习笔记</title>
+<meta name="description" content="安装"><meta property="og:title" content="安装" />
+<meta property="og:description" content="Istio 安装 快速安装（适合新人）  Download and install Istio Deploy the sample application Open the application to outside traffic View the dashboard  使用 Istioctl 进行安装 下载 Istio release [完成平台设置](platform-specific setup) Check the Requirements for Pods and Services Install Istio using the default profile " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/quick-start/install/" />
+<meta property="article:modified_time" content="2020-03-06T23:55:47+08:00" />
+<title>安装 | Istio 学习笔记</title>
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +18,6 @@
 
 <script defer src="/study-istio/en.search.min.d6706205c850d665d7b0ce9e1758a1aded486a52dd0c9f7fb9d83c81488aa60a.js" integrity="sha256-1nBiBchQ1mXXsM6eF1ihre1IalLdDJ9/udg8gUiKpgo="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/appendix/article/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -115,7 +114,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-istio/docs/basic/quick-start/install/" >
+  <a href="/study-istio/docs/basic/quick-start/install/"  class="active">
       安装
   </a>
 
@@ -685,7 +684,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>文章</strong>
+  <strong>安装</strong>
 
   <label for="toc-control">
     <img src="/study-istio/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -697,7 +696,23 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#istio-">Istio 安装</a>
+      <ul>
+        <li><a href="#heading">快速安装（适合新人）</a></li>
+        <li><a href="#-istioctl-">使用 Istioctl 进行安装</a>
+          <ul>
+            <li><a href="#-istio-release">下载 Istio release</a></li>
+            <li><a href="#platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
+            <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements">Check the Requirements for Pods and Services</a></li>
+            <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
     </aside>
@@ -707,7 +722,20 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"></article>
+<article class="markdown"><h1 id="istio-">Istio 安装</h1>
+<h2 id="heading">快速安装（适合新人）</h2>
+<ul>
+<li>Download and install Istio</li>
+<li>Deploy the sample application</li>
+<li>Open the application to outside traffic</li>
+<li>View the dashboard</li>
+</ul>
+<h2 id="-istioctl-">使用 Istioctl 进行安装</h2>
+<h3 id="-istio-release">下载 Istio release</h3>
+<h3 id="platform-specific-setup">[完成平台设置](platform-specific setup)</h3>
+<h3 id="check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements"><a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a></h3>
+<h3 id="install-istio-using-the-default-profile">Install Istio using the default profile</h3>
+</article>
  
       
 
@@ -719,9 +747,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/434accd39da6f6b8369c49f978f7c68db782b857" title='Last modified by yewang | 2020-03-02' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/a3df5ed992938fa9e9d92a29ec9c896b0894cd73" title='Last modified by yewang | 2020-03-06' target="_blank" rel="noopener">
       <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-02</span>
+      <span>2020-03-06</span>
     </a>
   </div>
 
@@ -731,6 +759,17 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/study-istio"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+
+</div>
   
  
       </footer>
@@ -742,7 +781,23 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#istio-">Istio 安装</a>
+      <ul>
+        <li><a href="#heading">快速安装（适合新人）</a></li>
+        <li><a href="#-istioctl-">使用 Istioctl 进行安装</a>
+          <ul>
+            <li><a href="#-istio-release">下载 Istio release</a></li>
+            <li><a href="#platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
+            <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements">Check the Requirements for Pods and Services</a></li>
+            <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
  
     </aside>

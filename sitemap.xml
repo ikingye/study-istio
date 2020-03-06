@@ -18,17 +18,22 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/quick-start/install/</loc>
+    <lastmod>2020-03-06T23:55:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/quick-start/</loc>
+    <lastmod>2020-03-06T23:55:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/</loc>
     <lastmod>2020-03-02T22:31:24+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/components/mixer/</loc>
-    <lastmod>2020-03-02T22:31:24+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ikingye.github.io/study-istio/docs/basic/quick-start/</loc>
     <lastmod>2020-03-02T22:31:24+08:00</lastmod>
   </url>
   
@@ -85,6 +90,21 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/components/galley/</loc>
     <lastmod>2020-03-02T22:31:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/crd/</loc>
+    <lastmod>2020-03-06T23:55:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/version/1.4/</loc>
+    <lastmod>2020-03-06T23:55:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/version/1.5/</loc>
+    <lastmod>2020-03-06T23:55:47+08:00</lastmod>
   </url>
   
   <url>
