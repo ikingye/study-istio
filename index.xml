@@ -10,15 +10,6 @@
     
     
     <item>
-      <title>sidecar 注入</title>
-      <link>https://ikingye.github.io/study-istio/docs/appendix/article/injection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/appendix/article/injection/</guid>
-      <description>Istio 如何实现 sidecar 注入 </description>
-    </item>
-    
-    <item>
       <title>安装</title>
       <link>https://ikingye.github.io/study-istio/docs/basic/quick-start/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -28,12 +19,30 @@
     </item>
     
     <item>
-      <title>流量劫持</title>
-      <link>https://ikingye.github.io/study-istio/docs/appendix/article/hijack/</link>
+      <title>基础</title>
+      <link>https://ikingye.github.io/study-istio/docs/appendix/interview/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-istio/docs/appendix/article/hijack/</guid>
-      <description>Istio 如何实现流量劫持 </description>
+      <guid>https://ikingye.github.io/study-istio/docs/appendix/interview/basic/</guid>
+      <description>基础面试题 </description>
+    </item>
+    
+    <item>
+      <title>进阶</title>
+      <link>https://ikingye.github.io/study-istio/docs/appendix/interview/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/appendix/interview/advanced/</guid>
+      <description>进阶面试题 </description>
+    </item>
+    
+    <item>
+      <title>高阶</title>
+      <link>https://ikingye.github.io/study-istio/docs/appendix/interview/expert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/appendix/interview/expert/</guid>
+      <description>高阶面试题 </description>
     </item>
     
   </channel>
