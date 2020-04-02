@@ -45,5 +45,18 @@
       <description>高阶面试题 </description>
     </item>
     
+    <item>
+      <title>关注</title>
+      <link>https://ikingye.github.io/study-istio/docs/appendix/attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/appendix/attention/</guid>
+      <description>关注 istio/istio  Connect, secure, control, and observe services. https://istio.io
+envoyproxy/envoy  Cloud-native high-performance edge/middle/service proxy https://www.envoyproxy.io
+mosn/mosn  MOSN is a cloud native proxy for edge or service mesh. https://mosn.io
+其他 kubernetes/kubernetes  Production-Grade Container Scheduling and Management https://kubernetes.io
+knative/serving  Kubernetes-based, scale-to-zero, request-driven compute https://knative.dev/docs/serving</description>
+    </item>
+    
   </channel>
 </rss>
