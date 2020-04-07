@@ -18,6 +18,7 @@
       <description>关注 istio/istio  Connect, secure, control, and observe services. https://istio.io
 envoyproxy/envoy  Cloud-native high-performance edge/middle/service proxy https://www.envoyproxy.io
 mosn/mosn  MOSN is a cloud native proxy for edge or service mesh. https://mosn.io
+rancher/rio Application Deployment Engine for Kubernetes https://rio.io
 其他 kubernetes/kubernetes  Production-Grade Container Scheduling and Management https://kubernetes.io
 knative/serving  Kubernetes-based, scale-to-zero, request-driven compute https://knative.dev/docs/serving</description>
     </item>
