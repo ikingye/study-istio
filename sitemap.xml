@@ -24,7 +24,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/appendix/tutorial/</loc>
-    <lastmod>2020-03-09T22:05:08+08:00</lastmod>
+    <lastmod>2020-04-07T17:59:32+08:00</lastmod>
   </url>
   
   <url>
@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/architecture/</loc>
-    <lastmod>2020-03-16T14:00:48+08:00</lastmod>
+    <lastmod>2020-04-07T17:59:32+08:00</lastmod>
   </url>
   
   <url>
@@ -99,7 +99,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/crd/</loc>
-    <lastmod>2020-03-16T14:00:48+08:00</lastmod>
+    <lastmod>2020-04-07T17:59:32+08:00</lastmod>
   </url>
   
   <url>
@@ -110,6 +110,11 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/version/1.5/</loc>
     <lastmod>2020-03-06T23:55:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/api-resources/</loc>
+    <lastmod>2020-04-07T17:59:32+08:00</lastmod>
   </url>
   
   <url>
