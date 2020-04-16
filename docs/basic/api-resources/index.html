@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="API Resources"><meta property="og:title" content="API Resources" />
+<meta name="description" content="Istio API Resources kubectl api-resources
+   NAME SHORTNAMES APIGROUP NAMESPACED KIND      bindings   true Binding    componentstatuses cs  false ComponentStatus    configmaps cm  true ConfigMap    endpoints ep  true Endpoints    events ev  true Event    limitranges limits  true LimitRange    namespaces ns  false Namespace    nodes no  false Node    persistentvolumeclaims pvc  true PersistentVolumeClaim    persistentvolumes pv  false PersistentVolume    pods po  true Pod    podtemplates   true PodTemplate    replicationcontrollers rc  true ReplicationController    resourcequotas quota  true ResourceQuota    secrets   true Secret    serviceaccounts sa  true ServiceAccount    services svc  true Service    mutatingwebhookconfigurations  admissionregistration."><meta property="og:title" content="API Resources" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/api-resources/" />
@@ -13,10 +14,10 @@
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/study-istio/book.scss" integrity="">
+<link rel="stylesheet" href="/study-istio/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-istio/en.search.min.d8878c1e188c8405f5a9ae171819da208cb9de7d921d784d527dde8a1d263ff0.js" integrity="sha256-2IeMHhiMhAX1qa4XGBnaIIy53n2SHXhNUn3eih0mP/A="></script>
+<script defer src="/study-istio/en.search.min.fe189eadd4dc2e3d5656ee21ff8005813465edd95a3d8798fbaebe7f8776f26a.js" integrity="sha256-/hierdTcLj1WVu4h/4AFgTRl7dlaPYeY&#43;66&#43;f4d28mo="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/basic/api-resources/index.xml" title="Istio 学习笔记" />
 <!--
@@ -49,6 +50,12 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+
+
+
+
   
 
   
@@ -71,10 +78,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      <span>第一部分 基础</span>
-    
+
+  
+  <span>第一部分 基础</span>
+  
+
 
     
 
@@ -87,16 +97,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/basic/quick-start/" >
-      快速上手
-  </a>
+  
+  <a href="/study-istio/docs/basic/quick-start/" class="">快速上手</a>
+  
 
-
-    
 
     
 
@@ -109,9 +116,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-istio/docs/basic/quick-start/install/" >
-      安装
-  </a>
+  
+  <a href="/study-istio/docs/basic/quick-start/install/" class="">安装</a>
+  
 
 </li>
       
@@ -129,16 +136,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/basic/architecture/" >
-      架构
-  </a>
+  
+  <a href="/study-istio/docs/basic/architecture/" class="">架构</a>
+  
 
-
-    
 
     
 
@@ -161,10 +165,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      <span>组件</span>
-    
+
+  
+  <span>组件</span>
+  
+
 
     
 
@@ -177,16 +184,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/basic/components/envoy/" >
-      Envoy
-  </a>
+  
+  <a href="/study-istio/docs/basic/components/envoy/" class="">Envoy</a>
+  
 
-
-    
 
     
 
@@ -199,154 +203,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
-
-  <a href="/study-istio/docs/basic/components/envoy/xds/" >
-      xDS
-  </a>
-
-
-    
-
-    
-
-
-
 
   
-  <ul>
-    
-  </ul>
+  <a href="/study-istio/docs/basic/components/envoy/xds/" class="">xDS</a>
   
 
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/study-istio/docs/basic/components/mixer/" >
-      Mixer
-  </a>
-
-
-    
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/study-istio/docs/basic/components/pilot/" >
-      Pilot
-  </a>
-
-
-    
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/study-istio/docs/basic/components/citadel/" >
-      Citadel
-  </a>
-
-
-    
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li >
-    
-      
-
-  <a href="/study-istio/docs/basic/components/galley/" >
-      Galley
-  </a>
-
-
-    
 
     
 
@@ -379,16 +242,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/basic/crd/" >
-      Istio CRD
-  </a>
+  
+  <a href="/study-istio/docs/basic/components/mixer/" class="">Mixer</a>
+  
 
-
-    
 
     
 
@@ -411,16 +271,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/basic/api-resources/"  class="active">
-      API Resources
-  </a>
+  
+  <a href="/study-istio/docs/basic/components/pilot/" class="">Pilot</a>
+  
 
-
-    
 
     
 
@@ -443,38 +300,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
-
-  <a href="/study-istio/docs/basic/version/" >
-      版本
-  </a>
-
-
-    
-
-    
-
-
-
 
   
-  <ul>
-    
-      
-        
+  <a href="/study-istio/docs/basic/components/citadel/" class="">Citadel</a>
+  
 
-  <li >
-    
-      
-
-  <a href="/study-istio/docs/basic/version/1.5/" >
-      Istio 1.5
-  </a>
-
-
-    
 
     
 
@@ -497,16 +329,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/basic/version/1.4/" >
-      Istio 1.4
-  </a>
+  
+  <a href="/study-istio/docs/basic/components/galley/" class="">Galley</a>
+  
 
-
-    
 
     
 
@@ -539,10 +368,119 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      <span>Servicemesh</span>
+
+  
+  <a href="/study-istio/docs/basic/crd/" class="">Istio CRD</a>
+  
+
+
     
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/api-resources/" class="active">API Resources</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/version/" class="">版本</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/version/1.5/" class="">Istio 1.5</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/version/1.4/" class="">Istio 1.4</a>
+  
+
 
     
 
@@ -575,10 +513,52 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      <span>第二部分 设计</span>
+
+  
+  <span>Servicemesh</span>
+  
+
+
     
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>第二部分 设计</span>
+  
+
 
     
 
@@ -601,10 +581,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      <span>第三部分 源码实现</span>
-    
+
+  
+  <span>第三部分 源码实现</span>
+  
+
 
     
 
@@ -627,10 +610,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      <span>第四部分 附录</span>
-    
+
+  
+  <span>第四部分 附录</span>
+  
+
 
     
 
@@ -643,16 +629,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/appendix/tutorial/" >
-      教程
-  </a>
+  
+  <a href="/study-istio/docs/appendix/tutorial/" class="">教程</a>
+  
 
-
-    
 
     
 
@@ -675,16 +658,13 @@ https://github.com/alex-shpak/hugo-book
       
         
 
-  <li >
+  <li>
     
-      
 
-  <a href="/study-istio/docs/appendix/interview/" >
-      面试题
-  </a>
+  
+  <a href="/study-istio/docs/appendix/interview/" class="">面试题</a>
+  
 
-
-    
 
     
 
@@ -697,9 +677,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-istio/docs/appendix/interview/basic/" >
-      基础
-  </a>
+  
+  <a href="/study-istio/docs/appendix/interview/basic/" class="">基础</a>
+  
 
 </li>
       
@@ -707,9 +687,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-istio/docs/appendix/interview/advanced/" >
-      进阶
-  </a>
+  
+  <a href="/study-istio/docs/appendix/interview/advanced/" class="">进阶</a>
+  
 
 </li>
       
@@ -717,9 +697,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-istio/docs/appendix/interview/expert/" >
-      高阶
-  </a>
+  
+  <a href="/study-istio/docs/appendix/interview/expert/" class="">高阶</a>
+  
 
 </li>
       
@@ -737,9 +717,9 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
 
-  <a href="/study-istio/docs/appendix/attention/" >
-      关注
-  </a>
+  
+  <a href="/study-istio/docs/appendix/attention/" class="">关注</a>
+  
 
 </li>
       
@@ -760,6 +740,11 @@ https://github.com/alex-shpak/hugo-book
 
 
   
+
+
+
+
+
 
 
 
@@ -815,7 +800,8 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="istio-api-resources">Istio API Resources</h1>
+      
+  <article class="markdown"><h1 id="istio-api-resources">Istio API Resources</h1>
 <p><code>kubectl api-resources</code></p>
 <table>
 <thead>
@@ -1497,6 +1483,7 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </article>
  
+      
 
       <footer class="book-footer">
         
@@ -1518,6 +1505,9 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 <script src="https://utteranc.es/client.js"
@@ -1531,8 +1521,8 @@ https://github.com/alex-shpak/hugo-book
 </div>
   
  
-      </footer>
-      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
