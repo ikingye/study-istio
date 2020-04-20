@@ -98,6 +98,18 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/practice/jaeger/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/practice/zipkin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/practice/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/architecture/</loc>
     <lastmod>2020-04-16T23:23:14+08:00</lastmod>
   </url>
