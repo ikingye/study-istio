@@ -76,7 +76,19 @@ rancher/rio Application Deployment Engine for Kubernetes https://rio.io
 其他 kubernetes/kubernetes Production-Grade Container Scheduling and Management https://kubernetes.io
 knative/serving Kubernetes-based, scale-to-zero, request-driven compute https://knative.dev/docs/serving
 openzipkin/zipkin Zipkin is a distributed tracing system https://zipkin.io/
-jaegertracing/jaeger CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
+jaegertracing/jaeger CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/
+dapr/dapr </description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://ikingye.github.io/study-istio/docs/basic/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/basic/faq/</guid>
+      <description>FAQ Istio 如何实现 Sidecar 注入？ Istio 如何实现流量管理？ 如何拦截流量 intercept traffic
+Istio 是在哪一层实现流量管理？为什么要在那一层？ Layer7 routing
+Istio 如何实现 mTLS 认证？ </description>
     </item>
     
   </channel>
