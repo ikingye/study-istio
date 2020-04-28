@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/practice/jaeger/</guid>
-      <description>Jaeger CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
+      <description>Jaeger  CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/practice/zipkin/</guid>
-      <description>Zipkin </description>
+      <description>Zipkin  </description>
     </item>
     
   </channel>
