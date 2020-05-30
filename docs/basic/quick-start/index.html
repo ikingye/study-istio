@@ -8,7 +8,12 @@
 概念 listener envoy 既然是 proxy，专门做转发，就得监听一个端口，接入请求，然后才能够根据策略转发，这个监听的地址称为 listener
 route cluster 由完全相同行为的多个 endpoint 组成，从 cluster 到 endpoint 的过程称为负载均衡。 cluster 里面配置负载均衡策略
 endpoint 目标的 ip 地址和端口，这个是 proxy 最终将请求转发到的地方
-静态配置的例子如下： 遥测（telemetry） "><meta property="og:title" content="快速上手" />
+静态配置的例子如下：  workload WORKLOAD 是 operators 部署的二进制文件，用于提供服务网格应用的一些功能。
+在 Kubernetes 环境中，一个工作负载通常对应一个 Kubernetes deployment， 并且一个工作负载实例对应一个独立的被 deployment 管理的 pod。
+工作负载实例 工作负载实例是工作负载的一个二进制实例化对象。 一个工作负载实例可以开放零个或多个服务 endpoint， 也可以消费零个或多个 服务。
+工作负载实例具有许多属性：
+ 名称和命名空间 唯一的 ID IP 地址 标签 主体  通过访问 source.* 和 destination.* 下面的属性，在 Istio 的策略和遥测配置功能中，可以用到这些属性。
+工作负载实例主体 WORKLOAD INSTANCE PRINCIPAL 工作负载实例主体是工作负载实例的可验证权限。Istio 的服务到服务身份验证用于生成工作负载实例主体。默认情况下，工作负载实例主体与 SPIFFE ID 格式兼容。"><meta property="og:title" content="快速上手" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/quick-start/" />
@@ -20,7 +25,7 @@ endpoint 目标的 ip 地址和端口，这个是 proxy 最终将请求转发到
 <link rel="stylesheet" href="/study-istio/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
 
 
-<script defer src="/study-istio/en.search.min.75beebd9f3234ad89863518cda0e6a904f5b235a70a49d3f0a60d71bb33f51a3.js" integrity="sha256-db7r2fMjStiYY1GM2g5qkE9bI1pwpJ0/CmDXG7M/UaM="></script>
+<script defer src="/study-istio/en.search.min.476e979271cfa6faf1cf7ba610b48828750f4ff848adefcaa2b5d1d9ba3ac657.js" integrity="sha256-R26XknHPpvrxz3umELSIKHUPT/hIre/KorXR2bo6xlc="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/basic/quick-start/index.xml" title="Istio 学习笔记" />
 <!--
@@ -483,6 +488,12 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#route">route</a></li>
             <li><a href="#cluster">cluster</a></li>
             <li><a href="#endpoint">endpoint</a></li>
+            <li><a href="#workloadhttpsistioiodocsreferenceglossaryworkload"><a href="https://istio.io/docs/reference/glossary/#workload">workload</a></a>
+              <ul>
+                <li><a href="#工作负载实例">工作负载实例</a></li>
+                <li><a href="#工作负载实例主体">工作负载实例主体</a></li>
+              </ul>
+            </li>
             <li><a href="#遥测telemetry">遥测（telemetry）</a></li>
           </ul>
         </li>
@@ -512,6 +523,26 @@ cluster 里面配置负载均衡策略</p>
 <p>目标的 ip 地址和端口，这个是 proxy 最终将请求转发到的地方</p>
 <p>静态配置的例子如下：
 <img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200301170820.png" alt="" /></p>
+<hr>
+<h3 id="workloadhttpsistioiodocsreferenceglossaryworkload"><a href="https://istio.io/docs/reference/glossary/#workload">workload</a></h3>
+<p>WORKLOAD 是 <a href="https://istio.io/zh/docs/reference/glossary/#operator">operators</a>  部署的二进制文件，用于提供服务网格应用的一些功能。</p>
+<p>在 Kubernetes 环境中，一个工作负载通常对应一个 Kubernetes deployment， 并且一个<a href="https://istio.io/zh/docs/reference/glossary/#workload-instance">工作负载实例</a>对应一个独立的被 deployment 管理的  <a href="https://istio.io/zh/docs/reference/glossary/#pod">pod</a>。</p>
+<h4 id="工作负载实例">工作负载实例</h4>
+<p>工作负载实例是<a href="https://istio.io/zh/docs/reference/glossary/#workload">工作负载</a>的一个二进制实例化对象。 一个工作负载实例可以开放零个或多个<a href="https://istio.io/zh/docs/reference/glossary/#service-endpoint">服务 endpoint</a>， 也可以消费零个或多个  <a href="https://istio.io/zh/docs/reference/glossary/#service">服务</a>。</p>
+<p>工作负载实例具有许多属性：</p>
+<ul>
+<li>名称和命名空间</li>
+<li>唯一的 ID</li>
+<li>IP 地址</li>
+<li>标签</li>
+<li>主体</li>
+</ul>
+<p>通过访问  <a href="https://istio.io/zh/docs/reference/config/policy-and-telemetry/attribute-vocabulary/"><code>source.*</code>  和  <code>destination.*</code>  下面的属性</a>，在 Istio 的策略和遥测配置功能中，可以用到这些属性。</p>
+<h4 id="工作负载实例主体">工作负载实例主体</h4>
+<p><a href="https://istio.io/zh/docs/reference/glossary/#workload-instance-principal">WORKLOAD INSTANCE PRINCIPAL</a>
+工作负载实例主体是<a href="https://istio.io/zh/docs/reference/glossary/#workload-instance">工作负载实例</a>的可验证权限。Istio 的服务到服务身份验证用于生成工作负载实例主体。默认情况下，工作负载实例主体与 SPIFFE ID 格式兼容。</p>
+<p>在  <code>policy</code>  和  <code>telemetry</code>  配置中用到了工作负载实例主体，对应的<a href="https://istio.io/zh/docs/reference/glossary/#attribute">属性</a>是  <code>source.principal</code>  和  <code>destination.principal</code>。</p>
+<hr>
 <h3 id="遥测telemetry">遥测（telemetry）</h3>
 </article>
  
@@ -570,6 +601,12 @@ cluster 里面配置负载均衡策略</p>
             <li><a href="#route">route</a></li>
             <li><a href="#cluster">cluster</a></li>
             <li><a href="#endpoint">endpoint</a></li>
+            <li><a href="#workloadhttpsistioiodocsreferenceglossaryworkload"><a href="https://istio.io/docs/reference/glossary/#workload">workload</a></a>
+              <ul>
+                <li><a href="#工作负载实例">工作负载实例</a></li>
+                <li><a href="#工作负载实例主体">工作负载实例主体</a></li>
+              </ul>
+            </li>
             <li><a href="#遥测telemetry">遥测（telemetry）</a></li>
           </ul>
         </li>
