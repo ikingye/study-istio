@@ -19,7 +19,7 @@ endpoint 目标的 ip 地址和端口，这个是 proxy 最终将请求转发到
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/study-istio/book.min.2b565af4d61986071164f1ead48c719f32bb138a148802dc3943b967fc4f20c6.css" integrity="sha256-K1Za9NYZhgcRZPHq1IxxnzK7E4oUiALcOUO5Z/xPIMY=">
+<link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
 <script defer src="/study-istio/en.search.min.9dd47477232e2a3b1d9f8d16cac0d2094cd8e4d1027d3dd39401763187a34a8e.js" integrity="sha256-ndR0dyMuKjsdn40WysDSCUzY5NECfT3TlAF2MYejSo4="></script>
@@ -492,36 +492,32 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#istio-快速上手">Istio 快速上手</a>
+    <li><a href="#istio-安装">Istio 安装</a>
       <ul>
-        <li><a href="#istio-安装">Istio 安装</a>
+        <li><a href="#快速安装适合新人">快速安装（适合新人）</a></li>
+        <li><a href="#使用-istioctl-进行安装">使用 Istioctl 进行安装</a>
           <ul>
-            <li><a href="#快速安装适合新人">快速安装（适合新人）</a></li>
-            <li><a href="#使用-istioctl-进行安装">使用 Istioctl 进行安装</a>
-              <ul>
-                <li><a href="#下载-istio-release">下载 Istio release</a></li>
-                <li><a href="#完成平台设置platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
-                <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements"><a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a></a></li>
-                <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
-              </ul>
-            </li>
+            <li><a href="#下载-istio-release">下载 Istio release</a></li>
+            <li><a href="#完成平台设置platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
+            <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements"><a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a></a></li>
+            <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
           </ul>
         </li>
-        <li><a href="#概念">概念</a>
+      </ul>
+    </li>
+    <li><a href="#概念">概念</a>
+      <ul>
+        <li><a href="#listener">listener</a></li>
+        <li><a href="#route">route</a></li>
+        <li><a href="#cluster">cluster</a></li>
+        <li><a href="#endpoint">endpoint</a></li>
+        <li><a href="#workloadhttpsistioiodocsreferenceglossaryworkload"><a href="https://istio.io/docs/reference/glossary/#workload">workload</a></a>
           <ul>
-            <li><a href="#listener">listener</a></li>
-            <li><a href="#route">route</a></li>
-            <li><a href="#cluster">cluster</a></li>
-            <li><a href="#endpoint">endpoint</a></li>
-            <li><a href="#workloadhttpsistioiodocsreferenceglossaryworkload"><a href="https://istio.io/docs/reference/glossary/#workload">workload</a></a>
-              <ul>
-                <li><a href="#工作负载实例">工作负载实例</a></li>
-                <li><a href="#工作负载实例主体">工作负载实例主体</a></li>
-              </ul>
-            </li>
-            <li><a href="#遥测telemetry">遥测（telemetry）</a></li>
+            <li><a href="#工作负载实例">工作负载实例</a></li>
+            <li><a href="#工作负载实例主体">工作负载实例主体</a></li>
           </ul>
         </li>
+        <li><a href="#遥测telemetry">遥测（telemetry）</a></li>
       </ul>
     </li>
   </ul>
@@ -632,36 +628,32 @@ cluster 里面配置负载均衡策略</p>
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#istio-快速上手">Istio 快速上手</a>
+    <li><a href="#istio-安装">Istio 安装</a>
       <ul>
-        <li><a href="#istio-安装">Istio 安装</a>
+        <li><a href="#快速安装适合新人">快速安装（适合新人）</a></li>
+        <li><a href="#使用-istioctl-进行安装">使用 Istioctl 进行安装</a>
           <ul>
-            <li><a href="#快速安装适合新人">快速安装（适合新人）</a></li>
-            <li><a href="#使用-istioctl-进行安装">使用 Istioctl 进行安装</a>
-              <ul>
-                <li><a href="#下载-istio-release">下载 Istio release</a></li>
-                <li><a href="#完成平台设置platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
-                <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements"><a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a></a></li>
-                <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
-              </ul>
-            </li>
+            <li><a href="#下载-istio-release">下载 Istio release</a></li>
+            <li><a href="#完成平台设置platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
+            <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements"><a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a></a></li>
+            <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
           </ul>
         </li>
-        <li><a href="#概念">概念</a>
+      </ul>
+    </li>
+    <li><a href="#概念">概念</a>
+      <ul>
+        <li><a href="#listener">listener</a></li>
+        <li><a href="#route">route</a></li>
+        <li><a href="#cluster">cluster</a></li>
+        <li><a href="#endpoint">endpoint</a></li>
+        <li><a href="#workloadhttpsistioiodocsreferenceglossaryworkload"><a href="https://istio.io/docs/reference/glossary/#workload">workload</a></a>
           <ul>
-            <li><a href="#listener">listener</a></li>
-            <li><a href="#route">route</a></li>
-            <li><a href="#cluster">cluster</a></li>
-            <li><a href="#endpoint">endpoint</a></li>
-            <li><a href="#workloadhttpsistioiodocsreferenceglossaryworkload"><a href="https://istio.io/docs/reference/glossary/#workload">workload</a></a>
-              <ul>
-                <li><a href="#工作负载实例">工作负载实例</a></li>
-                <li><a href="#工作负载实例主体">工作负载实例主体</a></li>
-              </ul>
-            </li>
-            <li><a href="#遥测telemetry">遥测（telemetry）</a></li>
+            <li><a href="#工作负载实例">工作负载实例</a></li>
+            <li><a href="#工作负载实例主体">工作负载实例主体</a></li>
           </ul>
         </li>
+        <li><a href="#遥测telemetry">遥测（telemetry）</a></li>
       </ul>
     </li>
   </ul>
