@@ -7,23 +7,21 @@
 <meta name="description" content="Istio 快速上手 官网：https://github.com/istio/istio
 Istio 安装 快速安装（适合新人）  Download and install Istio Deploy the sample application Open the application to outside traffic View the dashboard  使用 Istioctl 进行安装 下载 Istio release [完成平台设置](platform-specific setup) Check the Requirements for Pods and Services Install Istio using the default profile  概念 listener envoy 既然是 proxy，专门做转发，就得监听一个端口，接入请求，然后才能够根据策略转发，这个监听的地址称为 listener
 route cluster 由完全相同行为的多个 endpoint 组成，从 cluster 到 endpoint 的过程称为负载均衡。 cluster 里面配置负载均衡策略
-endpoint 目标的 ip 地址和端口，这个是 proxy 最终将请求转发到的地方"><meta property="og:title" content="快速上手" />
-<meta property="og:description" content="Istio 快速上手 官网：https://github.com/istio/istio
-Istio 安装 快速安装（适合新人）  Download and install Istio Deploy the sample application Open the application to outside traffic View the dashboard  使用 Istioctl 进行安装 下载 Istio release [完成平台设置](platform-specific setup) Check the Requirements for Pods and Services Install Istio using the default profile  概念 listener envoy 既然是 proxy，专门做转发，就得监听一个端口，接入请求，然后才能够根据策略转发，这个监听的地址称为 listener
-route cluster 由完全相同行为的多个 endpoint 组成，从 cluster 到 endpoint 的过程称为负载均衡。 cluster 里面配置负载均衡策略
-endpoint 目标的 ip 地址和端口，这个是 proxy 最终将请求转发到的地方" />
-<meta property="og:type" content="article" />
+endpoint 目标的 ip 地址和端口，这个是 proxy 最终将请求转发到的地方"><meta property="og:title" content="1.1 快速上手" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/quick/" />
-<meta property="article:modified_time" content="2020-06-15T17:03:27+08:00" />
-<title>快速上手 | Istio 学习笔记</title>
+
+<title>1.1 快速上手 | Istio 学习笔记</title>
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-istio/en.search.min.9dd47477232e2a3b1d9f8d16cac0d2094cd8e4d1027d3dd39401763187a34a8e.js" integrity="sha256-ndR0dyMuKjsdn40WysDSCUzY5NECfT3TlAF2MYejSo4="></script>
+<script defer src="/study-istio/en.search.min.e400f6c301d9d39c99e33183cf1d77fbbc080dd3f5f614253867b3978aedf4cc.js" integrity="sha256-5AD2wwHZ05yZ4zGDzx13&#43;7wIDdP19hQlOGezl4rt9Mw="></script>
 
+<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/basic/quick/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -98,7 +96,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>第一部分 基础</span>
+  <span>第一部分 基础入门</span>
   
 
 
@@ -117,7 +115,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/study-istio/docs/basic/crd/" class="">Istio CRD</a>
+  <a href="/study-istio/docs/basic/quick/" class="collapsed active">1.1 快速上手</a>
   
 
 
@@ -128,130 +126,12 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
     
       
         <li>
 
   
-  <a href="/study-istio/docs/basic/quick/" class="active">快速上手</a>
-  
-
-</li>
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/api-resources/" class="">API Resources</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/architecture/" class="collapsed ">架构</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/practice/" class="collapsed ">实践</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/components/" class="collapsed ">组件</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-istio/docs/basic/faq/" class="">FAQ</a>
+  <a href="/study-istio/docs/basic/quick/faq/" class="">FAQ</a>
   
 
 </li>
@@ -261,7 +141,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
-  <a href="/study-istio/docs/basic/kiali/" class="">Kiali</a>
+  <a href="/study-istio/docs/basic/quick/kiali/" class="">Kiali</a>
   
 
 </li>
@@ -284,7 +164,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <span>第二部分 设计</span>
+  <a href="/study-istio/docs/basic/concept/" class="collapsed ">1.2 概念</a>
   
 
 
@@ -293,8 +173,58 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
   
-  <ul>
+  <a href="/study-istio/docs/basic/arch/" class="collapsed ">1.3 架构</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/other/" class="collapsed ">1.4 其他</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
     
   </ul>
   
@@ -313,7 +243,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/study-istio/docs/source/" class="">第三部分 源码实现</a>
+  <span>第二部分 进阶实战</span>
   
 
 
@@ -324,6 +254,150 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/task/" class="collapsed ">2.2 任务</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/debug/" class="collapsed ">2.5 故障排查</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/code/" class="">第三部分 设计与实现</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/code/main/" class="collapsed ">3.1 主架构</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
     
   </ul>
   
@@ -361,7 +435,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/study-istio/docs/appendix/tutorial/" class="">教程</a>
+  <a href="/study-istio/docs/appendix/tutorial/" class="">4.1 教程</a>
   
 
 
@@ -390,7 +464,7 @@ https://github.com/alex-shpak/hugo-book
     
 
   
-  <a href="/study-istio/docs/appendix/snippet/" class="collapsed ">代码片段</a>
+  <a href="/study-istio/docs/appendix/interview/" class="collapsed ">4.2 面试题</a>
   
 
 
@@ -410,33 +484,10 @@ https://github.com/alex-shpak/hugo-book
         <li>
 
   
-  <a href="/study-istio/docs/appendix/attention/" class="">关注</a>
+  <a href="/study-istio/docs/appendix/attention/" class="">4.3 关注项目</a>
   
 
 </li>
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/appendix/interview/" class="collapsed ">面试题</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
       
     
   </ul>
@@ -496,7 +547,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>快速上手</strong>
+  <strong>1.1 快速上手</strong>
 
   <label for="toc-control">
     <img src="/study-istio/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -606,14 +657,6 @@ cluster 里面配置负载均衡策略</p>
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/446e5709f8e6713b93d6848bca0a0e6955c76709" title='Last modified by yewang | 2020-06-15' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-06-15</span>
-    </a>
-  </div>
 
 
 
