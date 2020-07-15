@@ -93,6 +93,10 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/code/envoy/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/appendix/interview/</loc>
     <lastmod>2020-07-14T22:13:27+08:00</lastmod>
   </url>
@@ -120,6 +124,14 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/appendix/attention/</loc>
     <lastmod>2020-07-14T22:13:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/code/istio/rate-limit/</loc>
   </url>
   
   <url>
