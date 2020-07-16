@@ -10,6 +10,25 @@
     
     
     <item>
+      <title>4.1 教程</title>
+      <link>https://ikingye.github.io/study-istio/docs/appendix/tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/appendix/tutorial/</guid>
+      <description>Istio 教程 基础 katacoda: 使用 istioctl 安装 istio
+进阶 高阶 </description>
+    </item>
+    
+    <item>
+      <title>4.2 面试题</title>
+      <link>https://ikingye.github.io/study-istio/docs/appendix/interview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/appendix/interview/</guid>
+      <description>Istio 面试题 基础题 进阶题 高阶题 </description>
+    </item>
+    
+    <item>
       <title>4.3 关注项目</title>
       <link>https://ikingye.github.io/study-istio/docs/appendix/attention/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
