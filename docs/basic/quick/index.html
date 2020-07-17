@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Istio 快速上手 官网：https://github.com/istio/istio
-Istio 安装 快速安装（适合新人）  Download and install Istio Deploy the sample application Open the application to outside traffic View the dashboard  使用 Istioctl 进行安装 下载 Istio release [完成平台设置](platform-specific setup) Check the Requirements for Pods and Services Install Istio using the default profile export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o jsonpath=&#39;{.items[0].status.hostIP}&#39;) export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath=&#39;{.spec.ports[?(@.name==&#34;http2&#34;)].nodePort}&#39;)  概念 listener envoy 既然是 proxy，专门做转发，就得监听一个端口，接入请求，然后才能够根据策略转发，这个监听的地址称为 listener"><meta property="og:title" content="1.1 快速上手" />
+Istio 安装 快速安装（适合新人）  Download and install Istio Deploy the sample application Open the application to outside traffic View the dashboard  使用 Istioctl 进行安装 下载 Istio release [完成平台设置](platform-specific setup) Check the Requirements for Pods and Services Install Istio using the default profile export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o jsonpath=&#39;{.items[0].status.hostIP}&#39;) export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath=&#39;{.spec.ports[?(@.name==&#34;http2&#34;)].nodePort}&#39;) export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath=&#39;{."><meta property="og:title" content="1.1 快速上手" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/quick/" />
@@ -17,7 +17,7 @@ Istio 安装 快速安装（适合新人）  Download and install Istio Deploy t
 <link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-istio/en.search.min.e272d4578243f72c94bef9a8e14de81a59ab9b4fc897624ca82585334fea37f2.js" integrity="sha256-4nLUV4JD9yyUvvmo4U3oGlmrm0/Il2JMqCWFM0/qN/I="></script>
+<script defer src="/study-istio/en.search.min.9d5d858961a07f49e6393e2da244a02d8cc422b3ed448f2cb1dd02eb56967073.js" integrity="sha256-nV2FiWGgf0nmOT4tokSgLYzEIrPtRI8ssd0C61aWcHM="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/basic/quick/index.xml" title="Istio 学习笔记" />
 <!--
@@ -606,7 +606,10 @@ https://github.com/alex-shpak/hugo-book
 <h4 id="install-istio-using-the-default-profile">Install Istio using the default profile</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export INGRESS_HOST<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl get po -l istio<span style="color:#f92672">=</span>ingressgateway -n istio-system -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.items[0].status.hostIP}&#39;</span><span style="color:#66d9ef">)</span>
 export INGRESS_PORT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl -n istio-system get service istio-ingressgateway -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.spec.ports[?(@.name==&#34;http2&#34;)].nodePort}&#39;</span><span style="color:#66d9ef">)</span>
+export SECURE_INGRESS_PORT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl -n istio-system get service istio-ingressgateway -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.spec.ports[?(@.name==&#34;https&#34;)].nodePort}&#39;</span><span style="color:#66d9ef">)</span>
+export GATEWAY_URL<span style="color:#f92672">=</span>$INGRESS_HOST:$INGRESS_PORT
 
+echo http://$GATEWAY_URL/productpage
 </code></pre></div><hr>
 <h2 id="概念">概念</h2>
 <h3 id="listener">listener</h3>
@@ -652,9 +655,9 @@ cluster 里面配置负载均衡策略</p>
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b80cf1906af05c9e625192f28e27bfd4e2732287" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b3780e03b4b5cc88454af52b7eda43ea0ea46511" title='Last modified by yewang | 2020-07-16' target="_blank" rel="noopener">
       <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-14</span>
+      <span>2020-07-16</span>
     </a>
   </div>
 
