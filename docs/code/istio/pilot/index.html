@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController  addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&hellip;) informer.AddEventHandler         s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err !"><meta property="og:title" content="Pilot" />
-<meta property="og:description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController  addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&hellip;) informer.AddEventHandler         s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err !" />
+<meta name="description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initDiscoveryService  initEventHandlers  定义 handler  s.EnvoyXdsServer.ConfigUpdate(pushReq)   s."><meta property="og:title" content="Pilot" />
+<meta property="og:description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initDiscoveryService  initEventHandlers  定义 handler  s.EnvoyXdsServer.ConfigUpdate(pushReq)   s." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/code/istio/pilot/" />
-<meta property="article:modified_time" content="2020-07-22T23:58:27+08:00" />
+<meta property="article:modified_time" content="2020-07-23T00:06:07+08:00" />
 <title>Pilot | Istio 学习笔记</title>
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-istio/en.search.min.6c2293ed353fde38fda788f30cd48a466a78ac9866fdd4e400906091c8cb207f.js" integrity="sha256-bCKT7TU/3jj9p4jzDNSKRmp4rJhm/dTkAJBgkcjLIH8="></script>
+<script defer src="/study-istio/en.search.min.76962a57cb7f29109157f06a9ec59a3b73a41112739e5528e56164fbe139bf99.js" integrity="sha256-dpYqV8t/KRCRV/BqnsWaO3OkERJznlUo5WFk&#43;&#43;E5v5k="></script>
 
 <!--
 Made with Book Theme
@@ -598,14 +598,20 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L88">makeKubeConfigController</a>
 <ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L397">(add schema) collections.Pilot.All()</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L402">NewClient</a></li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L408">NewController</a>
 <ul>
-<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L126">addInformer</a>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L126">(add stores for CRD kinds) addInformer</a>
 <ul>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L138">newCacheHandler</a>
 <ul>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L216">informer := cache.NewSharedIndexInformer(&hellip;)</a></li>
-<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L226">informer.AddEventHandler</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L226">informer.AddEventHandler</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L233">queue.Push(onEvent)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -620,65 +626,43 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L144">addStartFunc</a></li>
 </ul>
 </li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/server.go#L256">initDiscoveryService</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/server.go#L468">initEventHandlers</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/server.go#L762">定义 handler</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/status/reporter.go#L188">s.EnvoyXdsServer.ConfigUpdate(pushReq)</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/server.go#L796">s.configController.RegisterEventHandler</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L309">添加 handler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/cmd/pilot-discovery/main.go#L78">discoveryServer.Start(stop)</a>
 <ul>
-<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L344">controller Run</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L344">(<code>crd controller</code>) Run</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L353">informer.Run(stop)</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L348">cache.WaitForCacheSync(stop, c.HasSynced)</a>: 等待 Informer 完成一次本地缓存的数据同步操作</li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L349">c.queue.Run(stop)</a>: 执行 <code>queue.tasks</code>，即 <code>cacheHandler.onEvent</code>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L303">执行 handlers</a></li>
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 1
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">discoveryServer</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bootstrap</span>.<span style="color:#a6e22e">NewServer</span>(<span style="color:#a6e22e">serverArgs</span>)
-
-<span style="color:#75715e">// 2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">initConfigController</span>(<span style="color:#a6e22e">args</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;error initializing config controller: %v&#34;</span>, <span style="color:#a6e22e">err</span>)
-}
-
-<span style="color:#75715e">// 3
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">configController</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">makeKubeConfigController</span>(<span style="color:#a6e22e">args</span>)
-
-<span style="color:#75715e">// 4
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">controller</span>.<span style="color:#a6e22e">NewController</span>(<span style="color:#a6e22e">configClient</span>, <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">ControllerOptions</span>), <span style="color:#66d9ef">nil</span>
-
-<span style="color:#75715e">// 5
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">addInformer</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">WatchedNamespace</span>, <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">ResyncPeriod</span>)
-
-<span style="color:#75715e">// 6
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">kinds</span>[<span style="color:#a6e22e">kind</span>] = <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">newCacheHandler</span>(<span style="color:#f92672">...</span>)
-
-<span style="color:#75715e">// 7
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">informer</span>.<span style="color:#a6e22e">AddEventHandler</span>(
-	<span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">ResourceEventHandlerFuncs</span>{
-		<span style="color:#75715e">// TODO: filtering functions to skip over un-referenced resources (perf)
-</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">AddFunc</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">obj</span> <span style="color:#66d9ef">interface</span>{}) {
-			<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;add&#34;</span>)
-			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tryLedgerPut</span>(<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">schema</span>)
-			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">queue</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">error</span> {
-				<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">onEvent</span>(<span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">EventAdd</span>)
-			})
-		},
-		<span style="color:#a6e22e">UpdateFunc</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">old</span>, <span style="color:#a6e22e">cur</span> <span style="color:#66d9ef">interface</span>{}) {
-			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tryLedgerPut</span>(<span style="color:#a6e22e">cur</span>, <span style="color:#a6e22e">schema</span>)
-			<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">old</span>, <span style="color:#a6e22e">cur</span>) {
-				<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;update&#34;</span>)
-				<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">queue</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">error</span> {
-					<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">onEvent</span>(<span style="color:#a6e22e">old</span>, <span style="color:#a6e22e">cur</span>, <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">EventUpdate</span>)
-				})
-			} <span style="color:#66d9ef">else</span> {
-				<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;updatesame&#34;</span>)
-			}
-		},
-		<span style="color:#a6e22e">DeleteFunc</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">obj</span> <span style="color:#66d9ef">interface</span>{}) {
-			<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;delete&#34;</span>)
-			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tryLedgerDelete</span>(<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">schema</span>)
-			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">queue</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">error</span> {
-				<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">onEvent</span>(<span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">EventDelete</span>)
-			})
-		},
-	})
-</code></pre></div></article>
+</li>
+</ul>
+</li>
+</ul>
+</article>
  
       
 
@@ -690,9 +674,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/77564c3b54662f41a0d82b14f2380e34f1662425" title='Last modified by yewang | 2020-07-22' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/7ef55a08f0e21cfbadc90f85f50a82b3481e8dbc" title='Last modified by yewang | 2020-07-23' target="_blank" rel="noopener">
       <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-22</span>
+      <span>2020-07-23</span>
     </a>
   </div>
 
