@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/pilot/</guid>
-      <description>Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController addInformer newCacheHandler informer.AddEventHandler   s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err != nil { return nil, fmt.Errorf(&amp;#34;error initializing config controller: %v&amp;#34;, err) } // 3 configController, err := s.</description>
+      <description>Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController  addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&amp;hellip;) informer.AddEventHandler         s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err !</description>
     </item>
     
     <item>

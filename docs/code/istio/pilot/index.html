@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController addInformer newCacheHandler informer.AddEventHandler   s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err != nil { return nil, fmt.Errorf(&#34;error initializing config controller: %v&#34;, err) } // 3 configController, err := s."><meta property="og:title" content="Pilot" />
-<meta property="og:description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController addInformer newCacheHandler informer.AddEventHandler   s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err != nil { return nil, fmt.Errorf(&#34;error initializing config controller: %v&#34;, err) } // 3 configController, err := s." />
+<meta name="description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController  addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&hellip;) informer.AddEventHandler         s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err !"><meta property="og:title" content="Pilot" />
+<meta property="og:description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  NewController  addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&hellip;) informer.AddEventHandler         s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc     discoveryServer.Start(stop)  controller Run    // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/code/istio/pilot/" />
-<meta property="article:modified_time" content="2020-07-22T23:14:29+08:00" />
+<meta property="article:modified_time" content="2020-07-22T23:58:27+08:00" />
 <title>Pilot | Istio 学习笔记</title>
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-istio/en.search.min.fb715643ada67ce29ce489ddca483d741dd205f01b67ccf88e738fb1026f6797.js" integrity="sha256-&#43;3FWQ62mfOKc5Indykg9dB3SBfAbZ8z4jnOPsQJvZ5c="></script>
+<script defer src="/study-istio/en.search.min.6c2293ed353fde38fda788f30cd48a466a78ac9866fdd4e400906091c8cb207f.js" integrity="sha256-bCKT7TU/3jj9p4jzDNSKRmp4rJhm/dTkAJBgkcjLIH8="></script>
 
 <!--
 Made with Book Theme
@@ -591,33 +591,43 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="pilot-discovery">pilot discovery</h2>
 <h3 id="函数调用栈">函数调用栈</h3>
-<ol>
+<ul>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/cmd/pilot-discovery/main.go#L72">NewServer</a>
-<ol>
+<ul>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/server.go#L190">initConfigController</a>
-<ol>
+<ul>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L88">makeKubeConfigController</a>
-<ol>
-<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L408">NewController</a></li>
-<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L126">addInformer</a></li>
-<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L138">newCacheHandler</a></li>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L408">NewController</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L126">addInformer</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L138">newCacheHandler</a>
+<ul>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L216">informer := cache.NewSharedIndexInformer(&hellip;)</a></li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L226">informer.AddEventHandler</a></li>
-</ol>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L92">s.ConfigStores = append(s.ConfigStores, configController)</a></li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L134">aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores)</a></li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L138">s.configController = aggregateConfigController</a></li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L144">addStartFunc</a></li>
-</ol>
+</ul>
 </li>
-</ol>
+</ul>
 </li>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/cmd/pilot-discovery/main.go#L78">discoveryServer.Start(stop)</a>
-<ol>
+<ul>
 <li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L344">controller Run</a></li>
-</ol>
+</ul>
 </li>
-</ol>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 1
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">discoveryServer</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bootstrap</span>.<span style="color:#a6e22e">NewServer</span>(<span style="color:#a6e22e">serverArgs</span>)
 
@@ -680,7 +690,7 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/526b0044b91759004585b98d4300a418385accf6" title='Last modified by yewang | 2020-07-22' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/77564c3b54662f41a0d82b14f2380e34f1662425" title='Last modified by yewang | 2020-07-22' target="_blank" rel="noopener">
       <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-07-22</span>
     </a>
