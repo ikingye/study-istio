@@ -10,6 +10,24 @@
     
     
     <item>
+      <title>3.1.1 Istio 源码结构</title>
+      <link>https://ikingye.github.io/study-istio/docs/code/istio/structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/code/istio/structure/</guid>
+      <description>Istio 源码结构 1.6.5 $ tree -L 2 . ├── BUGS-AND-FEATURE-REQUESTS.md ├── CODEOWNERS ├── CONTRIBUTING.md ├── LICENSE ├── Makefile ├── Makefile.core.mk ├── Makefile.overrides.mk ├── README.md ├── SUPPORT.md ├── bin │ ├── check_no_modify.sh │ ├── check_samples.sh │ ├── codecov.sh │ ├── codecov_diff.sh │ ├── diff_yaml.py │ ├── init.sh │ ├── mixer_codegen.sh │ ├── nomodify.md5 │ ├── protoc.sh │ ├── update_crds.sh │ ├── update_deps.sh │ └── update_no_modify.sh ├── codecov.skip ├── codecov.threshold ├── common │ ├── Makefile.</description>
+    </item>
+    
+    <item>
+      <title>Istio 熔断</title>
+      <link>https://ikingye.github.io/study-istio/docs/code/istio/circuit-break/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/code/istio/circuit-break/</guid>
+      <description>Istio 熔断 </description>
+    </item>
+    
+    <item>
       <title>Istio 限流</title>
       <link>https://ikingye.github.io/study-istio/docs/code/istio/rate-limit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

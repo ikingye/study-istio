@@ -4,14 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mixer 基础 Mixer 已弃用。Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。
-请参考 Telemetry V2，它取代了 Mixer 遥测。"><meta property="og:title" content="Mixer" />
-<meta property="og:description" content="Mixer 基础 Mixer 已弃用。Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。
-请参考 Telemetry V2，它取代了 Mixer 遥测。" />
+<meta name="description" content="Istio 源码结构 1.6.5 $ tree -L 2 . ├── BUGS-AND-FEATURE-REQUESTS.md ├── CODEOWNERS ├── CONTRIBUTING.md ├── LICENSE ├── Makefile ├── Makefile.core.mk ├── Makefile.overrides.mk ├── README.md ├── SUPPORT.md ├── bin │ ├── check_no_modify.sh │ ├── check_samples.sh │ ├── codecov.sh │ ├── codecov_diff.sh │ ├── diff_yaml.py │ ├── init.sh │ ├── mixer_codegen.sh │ ├── nomodify.md5 │ ├── protoc.sh │ ├── update_crds.sh │ ├── update_deps.sh │ └── update_no_modify.sh ├── codecov.skip ├── codecov.threshold ├── common │ ├── Makefile."><meta property="og:title" content="3.1.1 Istio 源码结构" />
+<meta property="og:description" content="Istio 源码结构 1.6.5 $ tree -L 2 . ├── BUGS-AND-FEATURE-REQUESTS.md ├── CODEOWNERS ├── CONTRIBUTING.md ├── LICENSE ├── Makefile ├── Makefile.core.mk ├── Makefile.overrides.mk ├── README.md ├── SUPPORT.md ├── bin │ ├── check_no_modify.sh │ ├── check_samples.sh │ ├── codecov.sh │ ├── codecov_diff.sh │ ├── diff_yaml.py │ ├── init.sh │ ├── mixer_codegen.sh │ ├── nomodify.md5 │ ├── protoc.sh │ ├── update_crds.sh │ ├── update_deps.sh │ └── update_no_modify.sh ├── codecov.skip ├── codecov.threshold ├── common │ ├── Makefile." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/arch/components/mixer/" />
-<meta property="article:modified_time" content="2020-07-14T22:13:27+08:00" />
-<title>Mixer | Istio 学习笔记</title>
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/code/istio/structure/" />
+
+<title>3.1.1 Istio 源码结构 | Istio 学习笔记</title>
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
 
@@ -167,138 +165,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/arch/components/" class="collapsed ">组件</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        <li>
-
-  
-  <a href="/study-istio/docs/basic/arch/components/mixer/" class="active">Mixer</a>
-  
-
-</li>
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/arch/components/pilot/" class="">Pilot</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/arch/components/citadel/" class="">Citadel</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/arch/components/galley/" class="">Galley</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
 
 
 
@@ -496,6 +362,42 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/code/istio/structure/" class="active">3.1.1 Istio 源码结构</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/code/istio/circuit-break/" class="">Istio 熔断</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/code/istio/rate-limit/" class="">Istio 限流</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
 
 
   </li>
@@ -642,7 +544,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Mixer</strong>
+  <strong>3.1.1 Istio 源码结构</strong>
 
   <label for="toc-control">
     <img src="/study-istio/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -664,9 +566,197 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="mixer-基础">Mixer 基础</h1>
-<p>Mixer 已弃用。Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。</p>
-<p>请参考  <a href="https://istio.io/zh/docs/reference/config/telemetry">Telemetry V2</a>，它取代了 Mixer 遥测。</p>
+  <article class="markdown"><h1 id="istio-源码结构">Istio 源码结构</h1>
+
+
+
+
+<div class="book-tabs"><input type="radio" class="hidden" name="tabs-api-resources" id="tabs-api-resources-0" checked="checked" />
+  <label for="tabs-api-resources-0">1.6.5</label>
+  <div class="book-tabs-content markdown-inner"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ tree -L <span style="color:#ae81ff">2</span>
+.
+├── BUGS-AND-FEATURE-REQUESTS.md
+├── CODEOWNERS
+├── CONTRIBUTING.md
+├── LICENSE
+├── Makefile
+├── Makefile.core.mk
+├── Makefile.overrides.mk
+├── README.md
+├── SUPPORT.md
+├── bin
+│   ├── check_no_modify.sh
+│   ├── check_samples.sh
+│   ├── codecov.sh
+│   ├── codecov_diff.sh
+│   ├── diff_yaml.py
+│   ├── init.sh
+│   ├── mixer_codegen.sh
+│   ├── nomodify.md5
+│   ├── protoc.sh
+│   ├── update_crds.sh
+│   ├── update_deps.sh
+│   └── update_no_modify.sh
+├── codecov.skip
+├── codecov.threshold
+├── common
+│   ├── Makefile.common.mk
+│   ├── config
+│   └── scripts
+├── common-protos
+│   ├── github.com
+│   ├── gogoproto
+│   ├── google
+│   └── k8s.io
+├── docker
+│   ├── Dockerfile.base
+│   └── ca-certificates.tgz
+├── galley
+│   ├── README.md
+│   ├── pkg
+│   ├── testdatasets
+│   └── tools
+├── go.mod
+├── go.sum
+├── install
+│   ├── consul
+│   ├── gcp
+│   └── tools
+├── istio.deps
+├── istioctl
+│   ├── cmd
+│   ├── docker
+│   └── pkg
+├── licenses
+│   ├── ...
+├── manifests
+│   ├── addons
+│   ├── charts
+│   └── profiles
+├── mixer
+│   ├── README.md
+│   ├── adapter
+│   ├── cmd
+│   ├── docker
+│   ├── pkg
+│   ├── template
+│   ├── test
+│   ├── testdata
+│   └── tools
+├── operator
+│   ├── ARCHITECTURE.md
+│   ├── LICENSE
+│   ├── README.md
+│   ├── cmd
+│   ├── codecov.skip
+│   ├── codecov.threshold
+│   ├── data
+│   ├── deploy
+│   ├── docker
+│   ├── images
+│   ├── operator.mk
+│   ├── pkg
+│   ├── samples
+│   ├── scripts
+│   └── version
+├── pilot
+│   ├── cmd
+│   ├── docker
+│   ├── pkg
+│   ├── test
+│   └── tools
+├── pkg
+│   ├── adsc
+│   ├── bootstrap
+│   ├── cmd
+│   ├── config
+│   ├── dns
+│   ├── envoy
+│   ├── istio-agent
+│   ├── jwt
+│   ├── keepalive
+│   ├── kube
+│   ├── mcp
+│   ├── proto
+│   ├── queue
+│   ├── spiffe
+│   ├── test
+│   ├── tracing
+│   ├── util
+│   └── webhooks
+├── prow
+│   ├── config
+│   ├── integ-suite-kind.sh
+│   ├── integ-suite-local.sh
+│   ├── lib.sh
+│   ├── release-commit.sh
+│   ├── release-test.sh
+│   └── upload-istioio-snippets.sh
+├── release
+│   ├── downloadIstioCandidate.sh
+│   └── downloadIstioCtl.sh
+├── samples
+│   ├── README.md
+│   ├── addons
+│   ├── bookinfo
+│   ├── certs
+│   ├── custom-bootstrap
+│   ├── external
+│   ├── fortio
+│   ├── health-check
+│   ├── helloworld
+│   ├── httpbin
+│   ├── https
+│   ├── kubernetes-blog
+│   ├── multicluster
+│   ├── rawvm
+│   ├── security
+│   ├── sleep
+│   ├── tcp-echo
+│   └── websockets
+├── security
+│   ├── README.md
+│   ├── cmd
+│   ├── pkg
+│   ├── proto
+│   ├── samples
+│   └── tools
+├── test.go
+├── tests
+│   ├── apps
+│   ├── binary
+│   ├── codecov
+│   ├── common
+│   ├── integration
+│   ├── istio.mk
+│   ├── testdata
+│   └── util
+├── tools
+│   ├── buildx-gen.sh
+│   ├── certs
+│   ├── convert_RbacConfig_to_ClusterRbacConfig.sh
+│   ├── dump_kubernetes.sh
+│   ├── gen_istio_image_list.sh
+│   ├── istio-clean-iptables
+│   ├── istio-docker.mk
+│   ├── istio-iptables
+│   └── packaging
+└── vendor
+    ├── cloud.google.com
+    ├── code.cloudfoundry.org
+    ├── contrib.go.opencensus.io
+    ├── fortio.org
+    ├── github.com
+    ├── go.opencensus.io
+    ├── go.uber.org
+    └── golang.org
+
+<span style="color:#ae81ff">144</span> directories, <span style="color:#ae81ff">54</span> files
+
+</code></pre></div></div><input type="radio" class="hidden" name="tabs-api-resources" id="tabs-api-resources-1"  />
+  <label for="tabs-api-resources-1">1.4.6</label>
+  <div class="book-tabs-content markdown-inner"></div></div>
+
 </article>
  
       
@@ -676,14 +766,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b80cf1906af05c9e625192f28e27bfd4e2732287" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-14</span>
-    </a>
-  </div>
 
 
 
