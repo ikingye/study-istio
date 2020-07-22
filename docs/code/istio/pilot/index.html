@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer initConfigController makeKubeConfigController NewController addInformer newCacheHandler informer.AddEventHandler  // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err != nil { return nil, fmt.Errorf(&#34;error initializing config controller: %v&#34;, err) } // 3 configController, err := s.makeKubeConfigController(args) // 4 return controller.NewController(configClient, args.Config.ControllerOptions), nil // 5 out.addInformer(s, options.WatchedNamespace, options.ResyncPeriod) // 6 c.kinds[kind] = c.newCacheHandler(...) // 7 informer.AddEventHandler( cache.ResourceEventHandlerFuncs{ // TODO: filtering functions to skip over un-referenced resources (perf) 	AddFunc: func(obj interface{}) { incrementEvent(otype, &#34;add&#34;) c."><meta property="og:title" content="Pilot" />
+<meta property="og:description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer initConfigController makeKubeConfigController NewController addInformer newCacheHandler informer.AddEventHandler  // 1 discoveryServer, err := bootstrap.NewServer(serverArgs) // 2 if err := s.initConfigController(args); err != nil { return nil, fmt.Errorf(&#34;error initializing config controller: %v&#34;, err) } // 3 configController, err := s.makeKubeConfigController(args) // 4 return controller.NewController(configClient, args.Config.ControllerOptions), nil // 5 out.addInformer(s, options.WatchedNamespace, options.ResyncPeriod) // 6 c.kinds[kind] = c.newCacheHandler(...) // 7 informer.AddEventHandler( cache.ResourceEventHandlerFuncs{ // TODO: filtering functions to skip over un-referenced resources (perf) 	AddFunc: func(obj interface{}) { incrementEvent(otype, &#34;add&#34;) c." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/code/istio/pilot/" />
+
+<title>Pilot | Istio 学习笔记</title>
+<link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
+
+
+<script defer src="/study-istio/en.search.min.77489c4669d316601c0a2567227688d19695dd6513e21c39e6ec2956bf4a13f2.js" integrity="sha256-d0icRmnTFmAcCiVnInaI0ZaV3WUT4hw55uwpVr9KE/I="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/study-istio"><span>Istio 学习笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+<ul>
+  <li><a href="https://kingye.me" target="_blank" rel="noopener noreferrer">博客</a></li>
+  <li><a href="https://github.com/ikingye" target="_blank" rel="noopener noreferrer">
+    Github  <img src="https://img.shields.io/github/followers/ikingye.svg?label=%E5%85%B3%E6%B3%A8">
+  </a></li>
+  <li><a href="https://weibo.com/kingyip15215" target="_blank" rel="noopener noreferrer">
+    微博  <img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_16x16.png">
+  </a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip" target="_blank" rel="noopener noreferrer">知乎</a></li>
+  <li><a href="//shang.qq.com/wpa/qunwpa?idkey=3e0a609403c35928adb6a5e676abb1fceaf9360ca84b7a4f8f42f56a814ce02a&source_id=1_40001" target="_blank" rel="noopener noreferrer">Q 群</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+  
+
+  
+  
+
+
+
+
+
+ 
+  
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>第一部分 基础入门</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/quick/" class="collapsed ">1.1 快速上手</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/concept/" class="collapsed ">1.2 概念</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/arch/" class="collapsed ">1.3 架构</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/other/" class="collapsed ">1.4 其他</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>第二部分 进阶实战</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/task/" class="collapsed ">2.2 任务</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/debug/" class="collapsed ">2.5 故障排查</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/advanced/prof/" class="collapsed ">2.6 性能</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/code/" class="">第三部分 设计与实现</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/code/istio/" class="collapsed ">3.1 Istio</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/code/istio/structure/" class="">3.1.1 Istio 源码结构</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/code/istio/pilot/" class="active">Pilot</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/code/istio/circuit-break/" class="">Istio 熔断</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/code/istio/rate-limit/" class="">Istio 限流</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/code/envoy/" class="collapsed ">3.2 Envoy</a>
+  
+
+
+    
+
+
+
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <span>第四部分 附录</span>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/appendix/tutorial/" class="">4.1 教程</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/appendix/interview/" class="">4.2 面试题</a>
+  
+
+</li>
+      
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/appendix/attention/" class="">4.3 关注项目</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+<ul>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417022040.png" target="_blank" rel="noopener noreferrer">加我微信</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200428110046.png" target="_blank" rel="noopener noreferrer">请我喝饮料</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417021727.png" target="_blank" rel="noopener noreferrer">关注微信公众号</a></li>
+</ul>
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Pilot</strong>
+
+  <label for="toc-control">
+    <img src="/study-istio/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pilot-discovery">pilot discovery</a>
+      <ul>
+        <li><a href="#函数调用栈">函数调用栈</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="pilot">Pilot</h1>
+<blockquote class="book-hint info">
+  若无特别说明，本文是根据 <a href="https://github.com/istio/istio/tree/1.6.5">Istio 1.6.5</a> 进行分析。
+</blockquote>
+
+<h2 id="pilot-discovery">pilot discovery</h2>
+<h3 id="函数调用栈">函数调用栈</h3>
+<ol>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/cmd/pilot-discovery/main.go#L72">NewServer</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/server.go#L190">initConfigController</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L88">makeKubeConfigController</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/bootstrap/configcontroller.go#L408">NewController</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L126">addInformer</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L138">newCacheHandler</a></li>
+<li><a href="https://github.com/istio/istio/blob/f508fdd78eb0d3444e2bc2b3f36966d904c5db52/pilot/pkg/config/kube/crd/controller/controller.go#L226">informer.AddEventHandler</a></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">discoveryServer</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bootstrap</span>.<span style="color:#a6e22e">NewServer</span>(<span style="color:#a6e22e">serverArgs</span>)
+
+<span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">initConfigController</span>(<span style="color:#a6e22e">args</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;error initializing config controller: %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+}
+
+<span style="color:#75715e">// 3
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">configController</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">makeKubeConfigController</span>(<span style="color:#a6e22e">args</span>)
+
+<span style="color:#75715e">// 4
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">controller</span>.<span style="color:#a6e22e">NewController</span>(<span style="color:#a6e22e">configClient</span>, <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">ControllerOptions</span>), <span style="color:#66d9ef">nil</span>
+
+<span style="color:#75715e">// 5
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">addInformer</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">WatchedNamespace</span>, <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">ResyncPeriod</span>)
+
+<span style="color:#75715e">// 6
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">kinds</span>[<span style="color:#a6e22e">kind</span>] = <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">newCacheHandler</span>(<span style="color:#f92672">...</span>)
+
+<span style="color:#75715e">// 7
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">informer</span>.<span style="color:#a6e22e">AddEventHandler</span>(
+	<span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">ResourceEventHandlerFuncs</span>{
+		<span style="color:#75715e">// TODO: filtering functions to skip over un-referenced resources (perf)
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">AddFunc</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">obj</span> <span style="color:#66d9ef">interface</span>{}) {
+			<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;add&#34;</span>)
+			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tryLedgerPut</span>(<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">schema</span>)
+			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">queue</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">error</span> {
+				<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">onEvent</span>(<span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">EventAdd</span>)
+			})
+		},
+		<span style="color:#a6e22e">UpdateFunc</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">old</span>, <span style="color:#a6e22e">cur</span> <span style="color:#66d9ef">interface</span>{}) {
+			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tryLedgerPut</span>(<span style="color:#a6e22e">cur</span>, <span style="color:#a6e22e">schema</span>)
+			<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">DeepEqual</span>(<span style="color:#a6e22e">old</span>, <span style="color:#a6e22e">cur</span>) {
+				<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;update&#34;</span>)
+				<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">queue</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">error</span> {
+					<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">onEvent</span>(<span style="color:#a6e22e">old</span>, <span style="color:#a6e22e">cur</span>, <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">EventUpdate</span>)
+				})
+			} <span style="color:#66d9ef">else</span> {
+				<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;updatesame&#34;</span>)
+			}
+		},
+		<span style="color:#a6e22e">DeleteFunc</span>: <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">obj</span> <span style="color:#66d9ef">interface</span>{}) {
+			<span style="color:#a6e22e">incrementEvent</span>(<span style="color:#a6e22e">otype</span>, <span style="color:#e6db74">&#34;delete&#34;</span>)
+			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">tryLedgerDelete</span>(<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">schema</span>)
+			<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">queue</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#66d9ef">func</span>() <span style="color:#66d9ef">error</span> {
+				<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">onEvent</span>(<span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">EventDelete</span>)
+			})
+		},
+	})
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/study-istio"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pilot-discovery">pilot discovery</a>
+      <ul>
+        <li><a href="#函数调用栈">函数调用栈</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+<a href="https://github.com/ikingye/study-istio"
+class="github-corner" aria-label="View source on GitHub">
+<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+  <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+  <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+  <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+</svg></a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
