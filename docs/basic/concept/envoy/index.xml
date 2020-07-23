@@ -15,7 +15,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</guid>
-      <description>xDS CDS EDS LDS RDS </description>
+      <description>xDS CDS EDS LDS RDS 参考：
+ 深入解读 Service Mesh 背后的技术细节  </description>
     </item>
     
   </channel>

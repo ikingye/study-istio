@@ -8,7 +8,7 @@
 <meta property="og:description" content="Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initServiceControllers  NewServiceDiscovery  RegisterEventHandler: 注册 serviceEntryKind 与 workloadEntryKind 的 handler     initDiscoveryService  initEventHandlers  定义 handler  s." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/code/istio/pilot/" />
-<meta property="article:modified_time" content="2020-07-23T01:37:20+08:00" />
+<meta property="article:modified_time" content="2020-07-23T10:47:27+08:00" />
 <title>Pilot | Istio 学习笔记</title>
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
 
 
-<script defer src="/study-istio/en.search.min.d7c6651920f851fb2e83333a8f11c56c8e862efb9692e75033835a896bd179e8.js" integrity="sha256-18ZlGSD4UfsugzM6jxHFbI6GLvuWkudQM4NaiWvReeg="></script>
+<script defer src="/study-istio/en.search.min.5bf148973072f4a79a6e089a85175e6e7510ac8ca2e4b9e76562946cece7ec6a.js" integrity="sha256-W/FIlzBy9KeabgiahRdebnUQrIyi5LnnZWKUbOzn7Go="></script>
 
 <!--
 Made with Book Theme
@@ -679,7 +679,7 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/e75be86d608bafb081e3dabae568d6be1d4a8fea" title='Last modified by yewang | 2020-07-23' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/72942d2f2210802f8c6ce68a91fe4c61cbf24e6b" title='Last modified by yewang | 2020-07-23' target="_blank" rel="noopener">
       <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-07-23</span>
     </a>
