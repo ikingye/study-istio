@@ -72,7 +72,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/pilot/</guid>
-      <description>Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&amp;hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initDiscoveryService  initEventHandlers  定义 handler  s.EnvoyXdsServer.ConfigUpdate(pushReq)   s.</description>
+      <description>Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&amp;hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initServiceControllers  NewServiceDiscovery  RegisterEventHandler: 注册 serviceEntryKind 与 workloadEntryKind 的 handler     initDiscoveryService  initEventHandlers  定义 handler  s.</description>
     </item>
     
     <item>
@@ -134,6 +134,15 @@ openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</descr
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/rate-limit/</guid>
       <description>Istio 限流 </description>
+    </item>
+    
+    <item>
+      <title>xDS</title>
+      <link>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</guid>
+      <description>xDS CDS EDS LDS RDS </description>
     </item>
     
     <item>

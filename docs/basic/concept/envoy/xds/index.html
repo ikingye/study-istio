@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zipkin  "><meta property="og:title" content="Jaeger" />
-<meta property="og:description" content="Zipkin  " />
+<meta name="description" content="xDS CDS EDS LDS RDS "><meta property="og:title" content="xDS" />
+<meta property="og:description" content="xDS CDS EDS LDS RDS " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/other/zipkin/" />
-<meta property="article:modified_time" content="2020-07-14T22:13:27+08:00" />
-<title>Jaeger | Istio 学习笔记</title>
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/" />
+
+<title>xDS | Istio 学习笔记</title>
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 
 
@@ -143,6 +143,109 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  
+  <ul>
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/concept/crd/" class="">Istio CRD</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/concept/api-resources/" class="">API Resources</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+      
+        
+
+  <li>
+    
+
+  
+  <a href="/study-istio/docs/basic/concept/envoy/" class="collapsed ">Envoy</a>
+  
+
+
+    
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+
+  
+  <a href="/study-istio/docs/basic/concept/envoy/xds/" class="active">xDS</a>
+  
+
+</li>
+      
+    
+  </ul>
+  
+
+
+
+  </li>
+
+
+      
+    
+  </ul>
+  
+
 
 
   </li>
@@ -188,42 +291,6 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-  
-  <ul>
-    
-      
-        <li>
-
-  
-  <a href="/study-istio/docs/basic/other/jaeger/" class="">Jaeger</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-istio/docs/basic/other/zipkin/" class="active">Jaeger</a>
-  
-
-</li>
-      
-    
-      
-        <li>
-
-  
-  <a href="/study-istio/docs/basic/other/version/" class="">版本</a>
-  
-
-</li>
-      
-    
-  </ul>
-  
 
 
 
@@ -544,7 +611,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Jaeger</strong>
+  <strong>xDS</strong>
 
   <label for="toc-control">
     <img src="/study-istio/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -556,7 +623,14 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cds">CDS</a></li>
+    <li><a href="#eds">EDS</a></li>
+    <li><a href="#lds">LDS</a></li>
+    <li><a href="#rds">RDS</a></li>
+  </ul>
+</nav>
 
 
     </aside>
@@ -566,7 +640,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="zipkinhttpsgithubcomopenzipkinzipkin-github-starshttpsimgshieldsiogithubstarsopenzipkinzipkinsvg"><a href="https://github.com/openzipkin/zipkin">Zipkin</a> <img src="https://img.shields.io/github/stars/openzipkin/zipkin.svg" alt="Github stars" /></h1>
+  <article class="markdown"><h1 id="xds">xDS</h1>
+<h2 id="cds">CDS</h2>
+<h2 id="eds">EDS</h2>
+<h2 id="lds">LDS</h2>
+<h2 id="rds">RDS</h2>
 </article>
  
       
@@ -576,14 +654,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex justify-between">
 
 
-
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b80cf1906af05c9e625192f28e27bfd4e2732287" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-14</span>
-    </a>
-  </div>
 
 
 
@@ -614,7 +684,14 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cds">CDS</a></li>
+    <li><a href="#eds">EDS</a></li>
+    <li><a href="#lds">LDS</a></li>
+    <li><a href="#rds">RDS</a></li>
+  </ul>
+</nav>
 
  
     </aside>

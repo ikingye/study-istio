@@ -9,5 +9,14 @@
 	<atom:link href="https://ikingye.github.io/study-istio/docs/basic/concept/envoy/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>xDS</title>
+      <link>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</guid>
+      <description>xDS CDS EDS LDS RDS </description>
+    </item>
+    
   </channel>
 </rss>
