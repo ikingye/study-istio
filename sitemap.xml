@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/arch/components/pilot/</loc>
-    <lastmod>2020-07-22T23:14:29+08:00</lastmod>
+    <lastmod>2020-07-23T19:36:21+08:00</lastmod>
   </url>
   
   <url>
@@ -134,7 +134,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</loc>
-    <lastmod>2020-07-23T10:47:27+08:00</lastmod>
+    <lastmod>2020-07-23T19:36:21+08:00</lastmod>
   </url>
   
   <url>
@@ -150,6 +150,10 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/snippet/</loc>
     <lastmod>2020-07-14T22:13:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/version/</loc>
   </url>
   
   <url>
@@ -183,7 +187,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/</loc>
-    <lastmod>2020-07-23T10:47:27+08:00</lastmod>
+    <lastmod>2020-07-23T19:36:21+08:00</lastmod>
   </url>
   
   <url>
