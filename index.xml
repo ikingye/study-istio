@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/mixer/</guid>
-      <description>Mixer 基础 Mixer 已弃用。
+      <description>Mixer 基础 #  Mixer 已弃用。
 Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。
 请参考 Telemetry V2，它取代了 Mixer 遥测。</description>
     </item>
@@ -26,7 +26,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/pilot/</guid>
-      <description>Pilot 基础 参考：
+      <description>Pilot 基础 #  参考：
  深入理解 Istio 核心组件之 Pilot 深入解读 Service Mesh 背后的技术细节  </description>
     </item>
     
@@ -36,7 +36,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/citadel/</guid>
-      <description>Citadel </description>
+      <description>Citadel #  </description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/galley/</guid>
-      <description>Galley 基础 </description>
+      <description>Galley 基础 #  </description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/structure/</guid>
-      <description>Istio 源码结构 1.6.5 $ tree -L 2 . ├── BUGS-AND-FEATURE-REQUESTS.md ├── CODEOWNERS ├── CONTRIBUTING.md ├── LICENSE ├── Makefile ├── Makefile.core.mk ├── Makefile.overrides.mk ├── README.md ├── SUPPORT.md ├── bin │ ├── check_no_modify.sh │ ├── check_samples.sh │ ├── codecov.sh │ ├── codecov_diff.sh │ ├── diff_yaml.py │ ├── init.sh │ ├── mixer_codegen.sh │ ├── nomodify.md5 │ ├── protoc.sh │ ├── update_crds.sh │ ├── update_deps.sh │ └── update_no_modify.sh ├── codecov.skip ├── codecov.threshold ├── common │ ├── Makefile.</description>
+      <description>Istio 源码结构 #  1.6.5 $ tree -L 2 . ├── BUGS-AND-FEATURE-REQUESTS.md ├── CODEOWNERS ├── CONTRIBUTING.md ├── LICENSE ├── Makefile ├── Makefile.core.mk ├── Makefile.overrides.mk ├── README.md ├── SUPPORT.md ├── bin │ ├── check_no_modify.sh │ ├── check_samples.sh │ ├── codecov.sh │ ├── codecov_diff.sh │ ├── diff_yaml.py │ ├── init.sh │ ├── mixer_codegen.sh │ ├── nomodify.md5 │ ├── protoc.sh │ ├── update_crds.sh │ ├── update_deps.sh │ └── update_no_modify.sh ├── codecov.skip ├── codecov.threshold ├── common │ ├── Makefile.</description>
     </item>
     
     <item>
@@ -63,8 +63,8 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/appendix/tutorial/</guid>
-      <description>Istio 教程 基础 katacoda: 使用 istioctl 安装 istio
-进阶 </description>
+      <description>Istio 教程 #  基础 #  katacoda: 使用 istioctl 安装 istio
+进阶 #  </description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/pilot/</guid>
-      <description>Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&amp;hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initServiceControllers  NewServiceDiscovery  RegisterEventHandler: 注册 serviceEntryKind 与 workloadEntryKind 的 handler     initDiscoveryService  initEventHandlers  定义 handler  s.</description>
+      <description>Pilot #  若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery #  函数调用栈 #   NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&amp;hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initServiceControllers  NewServiceDiscovery  RegisterEventHandler: 注册 serviceEntryKind 与 workloadEntryKind 的 handler     initDiscoveryService  initEventHandlers  定义 handler  s.</description>
     </item>
     
     <item>
@@ -82,7 +82,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/appendix/interview/</guid>
-      <description>Istio 面试题 基础题 进阶题 </description>
+      <description>Istio 面试题 #  基础题 #  进阶题 #  </description>
     </item>
     
     <item>
@@ -91,7 +91,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/other/jaeger/</guid>
-      <description>Jaeger  CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
+      <description>Jaeger #  CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
     </item>
     
     <item>
@@ -100,7 +100,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/other/zipkin/</guid>
-      <description>Zipkin  </description>
+      <description>Zipkin #  </description>
     </item>
     
     <item>
@@ -109,14 +109,13 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/appendix/attention/</guid>
-      <description>关注项目 istio/istio  Connect, secure, control, and observe services. https://istio.io
-envoyproxy/envoy  Cloud-native high-performance edge/middle/service proxy https://www.envoyproxy.io
-kiali/kiali  Kiali project, observability for the Istio service mesh
-mosn/mosn  MOSN is a cloud native proxy for edge or service mesh. https://mosn.io
+      <description>关注项目 #  istio/istio #  Connect, secure, control, and observe services. https://istio.io
+envoyproxy/envoy #  Cloud-native high-performance edge/middle/service proxy https://www.envoyproxy.io
+kiali/kiali #  Kiali project, observability for the Istio service mesh
+mosn/mosn #  MOSN is a cloud native proxy for edge or service mesh. https://mosn.io
 rancher/rio Application Deployment Engine for Kubernetes https://rio.io
-其他 kubernetes/kubernetes  Production-Grade Container Scheduling and Management https://kubernetes.io
-knative/serving  Kubernetes-based, scale-to-zero, request-driven compute https://knative.dev/docs/serving
-openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</description>
+其他 #  kubernetes/kubernetes #  Production-Grade Container Scheduling and Management https://kubernetes.io
+knative/serving #  Kubernetes-based, scale-to-zero, request-driven compute https://knative.</description>
     </item>
     
     <item>
@@ -125,7 +124,7 @@ openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/circuit-break/</guid>
-      <description>Istio 熔断 </description>
+      <description>Istio 熔断 #  </description>
     </item>
     
     <item>
@@ -134,7 +133,7 @@ openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/rate-limit/</guid>
-      <description>Istio 限流 </description>
+      <description>Istio 限流 #  </description>
     </item>
     
     <item>
@@ -143,7 +142,7 @@ openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</guid>
-      <description>xDS CDS EDS LDS RDS 参考：
+      <description>xDS #  CDS #  EDS #  LDS #  RDS #  参考：
  深入解读 Service Mesh 背后的技术细节  </description>
     </item>
     
@@ -153,8 +152,8 @@ openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/version/</guid>
-      <description>Envoy 版本 参考： https://www.envoyproxy.io/docs/envoy/v1.15.0/version_history/version_history
-1.15 1.15.0 (2020-07-06)  1.14 1.14.3 (2020-06-30) 1.14.2 (2020-06-08) 1.14.0 (2020-04-08)  1.13 1.13.3 (2020-06-30) 1.13.0 (2020-01-20)  1.12 1.12.5 (2020-06-30) 1.12.1 (2019-11-08)  1.5 (2017-12-04)  1.4 (2017-08-24)  1.3 (2017-05-17)  1.2 (2017-03-07)  1.1 (2016-11-30)  1.0 (2016-09-12) </description>
+      <description>Envoy 版本 #  参考： https://www.envoyproxy.io/docs/envoy/v1.15.0/version_history/version_history
+1.15 #  1.15.0 (2020-07-06) #   1.14 #  1.14.3 (2020-06-30) #  1.14.2 (2020-06-08) #  1.14.0 (2020-04-08) #   1.13 #  1.13.3 (2020-06-30) #  1.13.0 (2020-01-20) #   1.12 #  1.12.5 (2020-06-30) #  1.12.1 (2019-11-08) #   1.5 (2017-12-04) #   1.4 (2017-08-24) #   1.3 (2017-05-17) #   1.2 (2017-03-07) #   1.</description>
     </item>
     
     <item>
@@ -163,8 +162,8 @@ openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/other/version/</guid>
-      <description>Istio 版本 参考： https://istio.io/news/releases/
-1.7  1.6 1.6.5 (2020-07-09) 1.6.0 (2020-05-21)  1.5 1.5.8 (2020-07-09) 1.5.0 (2020-03-05)  1.4 1.4.0 (2019-11-14)  1.3  1.2  1.1  1.0   0.x 0.8 (2018-06-01) 0.2 (2017-10-10) 0.1 (2017-05-24) </description>
+      <description>Istio 版本 #  参考： https://istio.io/news/releases/
+1.7 #   1.6 #  1.6.5 (2020-07-09) #  1.6.0 (2020-05-21) #   1.5 #  1.5.8 (2020-07-09) #  1.5.0 (2020-03-05) #   1.4 #  1.4.0 (2019-11-14) #   1.3 #   1.2 #   1.1 #   1.0 #    0.x #  0.8 (2018-06-01) #  0.2 (2017-10-10) #  0.</description>
     </item>
     
     <item>
@@ -173,9 +172,9 @@ openzipkin/zipkin  Zipkin is a distributed tracing system https://zipkin.</descr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/quick/faq/</guid>
-      <description>FAQ Istio 如何实现 Sidecar 注入？ Istio 如何实现流量管理？ 如何拦截流量 intercept traffic
-Istio 是在哪一层实现流量管理？为什么要在那一层？ Layer7 routing
-Istio 如何实现 mTLS 认证？ </description>
+      <description>FAQ #  Istio 如何实现 Sidecar 注入？ #  Istio 如何实现流量管理？ #  如何拦截流量 intercept traffic
+Istio 是在哪一层实现流量管理？为什么要在那一层？ #  Layer7 routing
+Istio 如何实现 mTLS 认证？ #  </description>
     </item>
     
     <item>
@@ -184,7 +183,7 @@ Istio 如何实现 mTLS 认证？ </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/quick/kiali/</guid>
-      <description>Kiali kiali/kiali Kiali project, observability for the Istio service mesh</description>
+      <description>Kiali #  kiali/kiali Kiali project, observability for the Istio service mesh</description>
     </item>
     
   </channel>

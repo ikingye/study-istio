@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/mixer/</guid>
-      <description>Mixer 基础 Mixer 已弃用。
+      <description>Mixer 基础 #  Mixer 已弃用。
 Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。
 请参考 Telemetry V2，它取代了 Mixer 遥测。</description>
     </item>
@@ -26,7 +26,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/pilot/</guid>
-      <description>Pilot 基础 参考：
+      <description>Pilot 基础 #  参考：
  深入理解 Istio 核心组件之 Pilot 深入解读 Service Mesh 背后的技术细节  </description>
     </item>
     
@@ -36,7 +36,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/citadel/</guid>
-      <description>Citadel </description>
+      <description>Citadel #  </description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/basic/arch/components/galley/</guid>
-      <description>Galley 基础 </description>
+      <description>Galley 基础 #  </description>
     </item>
     
   </channel>

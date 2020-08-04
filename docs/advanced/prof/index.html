@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="性能 "><meta property="og:title" content="2.6 性能" />
+<meta name="description" content="性能 #  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="2.6 性能" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/prof/" />
 
 <title>2.6 性能 | Istio 学习笔记</title>
+<link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/study-istio/book.min.169e83d32687959b39a421cc33db54d2a9d6fc29b4c5f314c1e2ec7610f913a5.css" integrity="sha256-Fp6D0yaHlZs5pCHMM9tU0qnW/Cm0xfMUweLsdhD5E6U=">
-
-
-<script defer src="/study-istio/en.search.min.212991c3fcb53e2a66f6629812a43eee57ecfa1c0850147969dc774715e23787.js" integrity="sha256-ISmRw/y1Pipm9mKYEqQ&#43;7lfs&#43;hwIUBR5adx3RxXiN4c="></script>
-
+<link rel="stylesheet" href="/study-istio/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
+<script defer src="/study-istio/en.search.min.22cab1872f3b8254de42fabfab537ae47657777d58d48d49561c37cdbb94a856.js" integrity="sha256-Isqxhy87glTeQvq/q1N65HZXd31Y1I1JVhw3zbuUqFY="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/prof/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
@@ -27,8 +24,9 @@ https://github.com/alex-shpak/hugo-book
   
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -41,7 +39,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -69,412 +67,306 @@ https://github.com/alex-shpak/hugo-book
 
   
 
-  
-  
-
-
-
-
-
- 
-  
-    
-
-
 
 
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
   
-  <span>第一部分 基础入门</span>
   
-
-
-    
-
-
-
-
   
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/quick/" class="collapsed ">1.1 快速上手</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/concept/" class="collapsed ">1.2 概念</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/arch/" class="collapsed ">1.3 架构</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/basic/other/" class="collapsed ">1.4 其他</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第二部分 进阶实战</span>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/advanced/task/" class="collapsed ">2.2 任务</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/advanced/debug/" class="collapsed ">2.5 故障排查</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/advanced/prof/" class="collapsed active">2.6 性能</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/code/" class="">第三部分 设计与实现</a>
-  
-
-
-    
-
-
-
-
-  
-  <ul>
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/code/istio/" class="collapsed ">3.1 Istio</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <a href="/study-istio/docs/code/envoy/" class="collapsed ">3.2 Envoy</a>
-  
-
-
-    
-
-
-
-
-
-
-  </li>
-
-
-      
-    
-  </ul>
-  
-
-
-
-  </li>
-
-
-      
-    
-      
-        
-
-  <li>
-    
-
-  
-  <span>第四部分 附录</span>
-  
-
-
-    
-
-
-
 
   
   <ul>
     
       
         <li>
+          
+  
+    <span>第一部分 基础入门</span>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-istio/docs/appendix/tutorial/" class="">4.1 教程</a>
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/basic/quick/" class="collapsed ">1.1 快速上手</a>
   
 
-</li>
+          
+  
+  
+  
+
+  
+
+        </li>
       
     
       
         <li>
+          
+  
+    <a href="/study-istio/docs/basic/concept/" class="collapsed ">1.2 概念</a>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-istio/docs/appendix/interview/" class="">4.2 面试题</a>
-  
 
-</li>
+        </li>
       
     
       
         <li>
+          
+  
+    <a href="/study-istio/docs/basic/arch/" class="collapsed ">1.3 架构</a>
+  
+
+          
+  
+  
+  
 
   
-  <a href="/study-istio/docs/appendix/attention/" class="">4.3 关注项目</a>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/basic/other/" class="collapsed ">1.4 其他</a>
   
 
-</li>
+          
+  
+  
+  
+
+  
+
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第二部分 进阶实战</span>
+  
 
+          
+  
+  
+  
 
-  </li>
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/task/" class="collapsed ">2.2 任务</a>
+  
 
+          
+  
+  
+  
 
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/snippet/" class="collapsed ">2.4 代码片段</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/debug/" class="collapsed ">2.5 故障排查</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/prof/" class="collapsed active">2.6 性能</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+  </ul>
+  
+
+        </li>
       
     
   </ul>
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/code/" class="">第三部分 设计与实现</a>
+  
 
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/code/istio/" class="collapsed ">3.1 Istio</a>
+  
+
+          
+  
+  
+  
 
   
 
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/code/envoy/" class="collapsed ">3.2 Envoy</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/appendix/tutorial/" class="">4.1 教程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/appendix/interview/" class="">4.2 面试题</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/appendix/attention/" class="">4.3 关注项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
 
 
 
@@ -518,39 +410,41 @@ https://github.com/alex-shpak/hugo-book
   <strong>2.6 性能</strong>
 
   <label for="toc-control">
+    
     <img src="/study-istio/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   <nav id="TableOfContents"></nav>
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-  <article class="markdown"><h1 id="性能">性能</h1>
+  <article class="markdown"><h1 id="性能">
+  性能
+  <a class="anchor" href="#%e6%80%a7%e8%83%bd">#</a>
+</h1>
 </article>
  
       
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b80cf1906af05c9e625192f28e27bfd4e2732287" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b80cf1906af05c9e625192f28e27bfd4e2732287" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
       <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-07-14</span>
     </a>

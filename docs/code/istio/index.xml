@@ -15,7 +15,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/structure/</guid>
-      <description>Istio 源码结构 1.6.5 $ tree -L 2 . ├── BUGS-AND-FEATURE-REQUESTS.md ├── CODEOWNERS ├── CONTRIBUTING.md ├── LICENSE ├── Makefile ├── Makefile.core.mk ├── Makefile.overrides.mk ├── README.md ├── SUPPORT.md ├── bin │ ├── check_no_modify.sh │ ├── check_samples.sh │ ├── codecov.sh │ ├── codecov_diff.sh │ ├── diff_yaml.py │ ├── init.sh │ ├── mixer_codegen.sh │ ├── nomodify.md5 │ ├── protoc.sh │ ├── update_crds.sh │ ├── update_deps.sh │ └── update_no_modify.sh ├── codecov.skip ├── codecov.threshold ├── common │ ├── Makefile.</description>
+      <description>Istio 源码结构 #  1.6.5 $ tree -L 2 . ├── BUGS-AND-FEATURE-REQUESTS.md ├── CODEOWNERS ├── CONTRIBUTING.md ├── LICENSE ├── Makefile ├── Makefile.core.mk ├── Makefile.overrides.mk ├── README.md ├── SUPPORT.md ├── bin │ ├── check_no_modify.sh │ ├── check_samples.sh │ ├── codecov.sh │ ├── codecov_diff.sh │ ├── diff_yaml.py │ ├── init.sh │ ├── mixer_codegen.sh │ ├── nomodify.md5 │ ├── protoc.sh │ ├── update_crds.sh │ ├── update_deps.sh │ └── update_no_modify.sh ├── codecov.skip ├── codecov.threshold ├── common │ ├── Makefile.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/pilot/</guid>
-      <description>Pilot 若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery 函数调用栈  NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&amp;hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initServiceControllers  NewServiceDiscovery  RegisterEventHandler: 注册 serviceEntryKind 与 workloadEntryKind 的 handler     initDiscoveryService  initEventHandlers  定义 handler  s.</description>
+      <description>Pilot #  若无特别说明，本文是根据 Istio 1.6.5 进行分析。  pilot discovery #  函数调用栈 #   NewServer  initConfigController  makeKubeConfigController  (add schema) collections.Pilot.All() NewClient NewController  (add stores for CRD kinds) addInformer  newCacheHandler  informer := cache.NewSharedIndexInformer(&amp;hellip;) informer.AddEventHandler  queue.Push(onEvent)           s.ConfigStores = append(s.ConfigStores, configController) aggregateConfigController, err := configaggregate.MakeCache(s.ConfigStores) s.configController = aggregateConfigController addStartFunc   initServiceControllers  NewServiceDiscovery  RegisterEventHandler: 注册 serviceEntryKind 与 workloadEntryKind 的 handler     initDiscoveryService  initEventHandlers  定义 handler  s.</description>
     </item>
     
     <item>
@@ -33,7 +33,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/circuit-break/</guid>
-      <description>Istio 熔断 </description>
+      <description>Istio 熔断 #  </description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/code/istio/rate-limit/</guid>
-      <description>Istio 限流 </description>
+      <description>Istio 限流 #  </description>
     </item>
     
   </channel>
