@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Istio 快速上手 #  官网：https://github.com/istio/istio
-Istio 安装 #  快速安装（适合新人） #   Download and install Istio Deploy the sample application Open the application to outside traffic View the dashboard  使用 Istioctl 进行安装 #  下载 Istio release #  [完成平台设置](platform-specific setup) #  Check the Requirements for Pods and Services #  Install Istio using the default profile #  export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o jsonpath=&#39;{.">
+ketacoda #  快速开始 Istio (by istio-handbook) #   概念 #  listener #  envoy 既然是 proxy，专门做转发，就得监听一个端口，接入请求，然后才能够根据策略转发，这个监听的地址称为 listener
+route #  cluster #  由完全相同行为的多个 endpoint 组成，从 cluster 到 endpoint 的过程称为负载均衡。 cluster 里面配置负载均衡策略
+endpoint #  目标的 ip 地址和端口，这个是 proxy 最终将请求转发到的地方
+静态配置的例子如下：  workload #  WORKLOAD 是 operators 部署的二进制文件，用于提供服务网格应用的一些功能。
+在 Kubernetes 环境中，一个工作负载通常对应一个 Kubernetes deployment， 并且一个工作负载实例对应一个独立的被 deployment 管理的 pod。
+工作负载实例 #  工作负载实例是工作负载的一个二进制实例化对象。 一个工作负载实例可以开放零个或多个服务 endpoint， 也可以消费零个或多个 服务。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="1.1 快速上手" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -15,7 +20,7 @@ Istio 安装 #  快速安装（适合新人） #   Download and install Istio De
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
-<script defer src="/study-istio/en.search.min.22cab1872f3b8254de42fabfab537ae47657777d58d48d49561c37cdbb94a856.js" integrity="sha256-Isqxhy87glTeQvq/q1N65HZXd31Y1I1JVhw3zbuUqFY="></script>
+<script defer src="/study-istio/en.search.min.5056660119f187bbb8dbebaf16f81d57c20aa0e53e685d51974b42df4eacbf82.js" integrity="sha256-UFZmARnxh7u42&#43;uvFvgdV8IKoOU&#43;aF1Rl0tC306sv4I="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/basic/quick/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
@@ -107,6 +112,16 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/basic/quick/install/" class="">安装</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -443,17 +458,9 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#istio-安装">Istio 安装</a>
+    <li><a href="#ketacoda">ketacoda</a>
       <ul>
-        <li><a href="#快速安装适合新人">快速安装（适合新人）</a></li>
-        <li><a href="#使用-istioctl-进行安装">使用 Istioctl 进行安装</a>
-          <ul>
-            <li><a href="#下载-istio-release">下载 Istio release</a></li>
-            <li><a href="#完成平台设置platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
-            <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements"><a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a></a></li>
-            <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
-          </ul>
-        </li>
+        <li><a href="#快速开始-istio-by-istio-handbookhttpskatacodacomistio-handbookcoursesistio-quick-start"><a href="https://katacoda.com/istio-handbook/courses/istio-quick-start">快速开始 Istio (by istio-handbook)</a></a></li>
       </ul>
     </li>
     <li><a href="#概念">概念</a>
@@ -487,47 +494,15 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#istio-%e5%bf%ab%e9%80%9f%e4%b8%8a%e6%89%8b">#</a>
 </h1>
 <p>官网：<a href="https://github.com/istio/istio">https://github.com/istio/istio</a></p>
-<h2 id="istio-安装">
-  Istio 安装
-  <a class="anchor" href="#istio-%e5%ae%89%e8%a3%85">#</a>
+<h2 id="ketacoda">
+  ketacoda
+  <a class="anchor" href="#ketacoda">#</a>
 </h2>
-<h3 id="快速安装适合新人">
-  快速安装（适合新人）
-  <a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%ae%89%e8%a3%85%e9%80%82%e5%90%88%e6%96%b0%e4%ba%ba">#</a>
+<h3 id="快速开始-istio-by-istio-handbookhttpskatacodacomistio-handbookcoursesistio-quick-start">
+  <a href="https://katacoda.com/istio-handbook/courses/istio-quick-start">快速开始 Istio (by istio-handbook)</a>
+  <a class="anchor" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b-istio-by-istio-handbookhttpskatacodacomistio-handbookcoursesistio-quick-start">#</a>
 </h3>
-<ul>
-<li>Download and install Istio</li>
-<li>Deploy the sample application</li>
-<li>Open the application to outside traffic</li>
-<li>View the dashboard</li>
-</ul>
-<h3 id="使用-istioctl-进行安装">
-  使用 Istioctl 进行安装
-  <a class="anchor" href="#%e4%bd%bf%e7%94%a8-istioctl-%e8%bf%9b%e8%a1%8c%e5%ae%89%e8%a3%85">#</a>
-</h3>
-<h4 id="下载-istio-release">
-  下载 Istio release
-  <a class="anchor" href="#%e4%b8%8b%e8%bd%bd-istio-release">#</a>
-</h4>
-<h4 id="完成平台设置platform-specific-setup">
-  [完成平台设置](platform-specific setup)
-  <a class="anchor" href="#%e5%ae%8c%e6%88%90%e5%b9%b3%e5%8f%b0%e8%ae%be%e7%bd%aeplatform-specific-setup">#</a>
-</h4>
-<h4 id="check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements">
-  <a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a>
-  <a class="anchor" href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements">#</a>
-</h4>
-<h4 id="install-istio-using-the-default-profile">
-  Install Istio using the default profile
-  <a class="anchor" href="#install-istio-using-the-default-profile">#</a>
-</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export INGRESS_HOST<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl get po -l istio<span style="color:#f92672">=</span>ingressgateway -n istio-system -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.items[0].status.hostIP}&#39;</span><span style="color:#66d9ef">)</span>
-export INGRESS_PORT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl -n istio-system get service istio-ingressgateway -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.spec.ports[?(@.name==&#34;http2&#34;)].nodePort}&#39;</span><span style="color:#66d9ef">)</span>
-export SECURE_INGRESS_PORT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl -n istio-system get service istio-ingressgateway -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.spec.ports[?(@.name==&#34;https&#34;)].nodePort}&#39;</span><span style="color:#66d9ef">)</span>
-export GATEWAY_URL<span style="color:#f92672">=</span>$INGRESS_HOST:$INGRESS_PORT
-
-echo http://$GATEWAY_URL/productpage
-</code></pre></div><hr>
+<hr>
 <h2 id="概念">
   概念
   <a class="anchor" href="#%e6%a6%82%e5%bf%b5">#</a>
@@ -634,17 +609,9 @@ cluster 里面配置负载均衡策略</p>
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#istio-安装">Istio 安装</a>
+    <li><a href="#ketacoda">ketacoda</a>
       <ul>
-        <li><a href="#快速安装适合新人">快速安装（适合新人）</a></li>
-        <li><a href="#使用-istioctl-进行安装">使用 Istioctl 进行安装</a>
-          <ul>
-            <li><a href="#下载-istio-release">下载 Istio release</a></li>
-            <li><a href="#完成平台设置platform-specific-setup">[完成平台设置](platform-specific setup)</a></li>
-            <li><a href="#check-the-requirements-for-pods-and-serviceshttpsistioiodocsopsdeploymentrequirements"><a href="https://istio.io/docs/ops/deployment/requirements/">Check the Requirements for Pods and Services</a></a></li>
-            <li><a href="#install-istio-using-the-default-profile">Install Istio using the default profile</a></li>
-          </ul>
-        </li>
+        <li><a href="#快速开始-istio-by-istio-handbookhttpskatacodacomistio-handbookcoursesistio-quick-start"><a href="https://katacoda.com/istio-handbook/courses/istio-quick-start">快速开始 Istio (by istio-handbook)</a></a></li>
       </ul>
     </li>
     <li><a href="#概念">概念</a>
