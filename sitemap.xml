@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/deploy/install/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/</loc>
     <lastmod>2020-07-16T20:40:35+08:00</lastmod>
   </url>
@@ -53,6 +57,10 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/deploy/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/code/istio/</loc>
     <lastmod>2020-07-14T23:13:45+08:00</lastmod>
   </url>
@@ -65,6 +73,10 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/appendix/tutorial/</loc>
     <lastmod>2020-07-16T20:40:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/</loc>
   </url>
   
   <url>
@@ -83,8 +95,7 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/advanced/task/</loc>
-    <lastmod>2020-07-14T22:13:27+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/tool/</loc>
   </url>
   
   <url>
@@ -95,6 +106,10 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/appendix/interview/</loc>
     <lastmod>2020-07-16T20:40:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</loc>
   </url>
   
   <url>
@@ -118,13 +133,12 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/appendix/attention/</loc>
-    <lastmod>2020-07-22T15:03:15+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/feature/</loc>
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/</loc>
-    <lastmod>2020-07-16T00:23:24+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-istio/docs/appendix/attention/</loc>
+    <lastmod>2020-07-22T15:03:15+08:00</lastmod>
   </url>
   
   <url>
@@ -138,8 +152,11 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/xds/</loc>
-    <lastmod>2020-07-23T19:36:21+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/</loc>
   </url>
   
   <url>
@@ -153,13 +170,11 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/advanced/snippet/</loc>
-    <lastmod>2020-07-14T22:13:27+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/gloo/</loc>
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/basic/concept/envoy/version/</loc>
-    <lastmod>2020-07-24T14:43:49+08:00</lastmod>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/version/</loc>
   </url>
   
   <url>
@@ -175,6 +190,18 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/prof/</loc>
     <lastmod>2020-07-14T22:13:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/test/test/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/dapr/</loc>
   </url>
   
   <url>
