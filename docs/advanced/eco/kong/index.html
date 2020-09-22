@@ -4,17 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ambassador #  datawire/ambassador Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Ambassador" />
-<meta property="og:description" content="Ambassador #  datawire/ambassador Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/" />
-<meta property="article:modified_time" content="2020-09-18T15:49:24+08:00" />
-<title>Ambassador | Istio 学习笔记</title>
+<meta name="description" content="Kong #  Kong/kong #  Kong is a cloud-native, fast, scalable, and distributed Microservice Abstraction Layer (also known as an API Gateway or API Middleware). Made available as an open-source project in 2015, its core values are high performance and extensibility.
+ Quickstart #  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Kong" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/kong/" />
+
+<title>Kong | Istio 学习笔记</title>
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
 <script defer src="/study-istio/en.search.min.6725f0520c48063d7faa5756884312c98844b95baa4bb28a61802b6c736e0879.js" integrity="sha256-ZyXwUgxIBj1/qldWiEMSyYhEuVuqS7KKYYArbHNuCHk="></script>
+<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/eco/kong/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -313,7 +315,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/eco/ambassador/" class="active">Ambassador</a>
+    <a href="/study-istio/docs/advanced/eco/ambassador/" class="">Ambassador</a>
   
 
         </li>
@@ -323,7 +325,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/eco/kong/" class="">Kong</a>
+    <a href="/study-istio/docs/advanced/eco/kong/" class="active">Kong</a>
   
 
           
@@ -530,7 +532,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Ambassador</strong>
+  <strong>Kong</strong>
 
   <label for="toc-control">
     
@@ -543,7 +545,12 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#kongkonghttpsgithubcomkongkong-github-starshttpsimgshieldsiogithubstarskongkongsvg"><a href="https://github.com/Kong/kong">Kong/kong</a> <img src="https://img.shields.io/github/stars/Kong/kong.svg" alt="Github stars"></a></li>
+    <li><a href="#quickstarthttpsdocskonghqcom20xgetting-startedquickstart"><a href="https://docs.konghq.com/2.0.x/getting-started/quickstart/">Quickstart</a></a></li>
+  </ul>
+</nav>
 
 
   </aside>
@@ -553,12 +560,20 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ambassador">
-  Ambassador
-  <a class="anchor" href="#ambassador">#</a>
+  <article class="markdown"><h1 id="kong">
+  Kong
+  <a class="anchor" href="#kong">#</a>
 </h1>
-<p><a href="https://github.com/datawire/ambassador">datawire/ambassador</a> <img src="https://img.shields.io/github/stars/datawire/ambassador.svg" alt="Github stars" /></p>
-<p>Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy</p>
+<a href="https://github.com/Kong/kong">Kong/kong</a> <h2 id="kongkonghttpsgithubcomkongkong-github-starshttpsimgshieldsiogithubstarskongkongsvg">
+  <img src="https://img.shields.io/github/stars/Kong/kong.svg" alt="Github stars" />
+  <a class="anchor" href="#kongkonghttpsgithubcomkongkong-github-starshttpsimgshieldsiogithubstarskongkongsvg">#</a>
+</h2>
+<p>Kong is a cloud-native, fast, scalable, and distributed Microservice Abstraction Layer (also known as an API Gateway or API Middleware). Made available as an open-source project in 2015, its core values are high performance and extensibility.</p>
+<hr>
+<h2 id="quickstarthttpsdocskonghqcom20xgetting-startedquickstart">
+  <a href="https://docs.konghq.com/2.0.x/getting-started/quickstart/">Quickstart</a>
+  <a class="anchor" href="#quickstarthttpsdocskonghqcom20xgetting-startedquickstart">#</a>
+</h2>
 </article>
  
       
@@ -568,12 +583,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/dfb9ff78be86298a2e33bee9b084de03adbfa072" title='Last modified by yewang | 2020-09-18' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-18</span>
-    </a>
-  </div>
 
 
 
@@ -604,7 +613,12 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#kongkonghttpsgithubcomkongkong-github-starshttpsimgshieldsiogithubstarskongkongsvg"><a href="https://github.com/Kong/kong">Kong/kong</a> <img src="https://img.shields.io/github/stars/Kong/kong.svg" alt="Github stars"></a></li>
+    <li><a href="#quickstarthttpsdocskonghqcom20xgetting-startedquickstart"><a href="https://docs.konghq.com/2.0.x/getting-started/quickstart/">Quickstart</a></a></li>
+  </ul>
+</nav>
 
  
     </aside>

@@ -40,7 +40,7 @@ kiali/kiali #  Kiali project, observability for the Istio service mesh
 mosn/mosn #  MOSN is a cloud native proxy for edge or service mesh. https://mosn.io
 rancher/rio Application Deployment Engine for Kubernetes https://rio.io
 其他 #  kubernetes/kubernetes #  Production-Grade Container Scheduling and Management https://kubernetes.io
-knative/serving #  Kubernetes-based, scale-to-zero, request-driven compute https://knative.</description>
+openzipkin/zipkin #  Zipkin is a distributed tracing system https://zipkin.</description>
     </item>
     
   </channel>
