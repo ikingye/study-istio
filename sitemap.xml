@@ -53,6 +53,10 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/code/source/1.0.0/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/quick/</loc>
     <lastmod>2020-09-10T16:52:32+08:00</lastmod>
   </url>
@@ -220,6 +224,10 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/dapr/</loc>
     <lastmod>2020-09-18T15:49:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/code/source/</loc>
   </url>
   
   <url>
