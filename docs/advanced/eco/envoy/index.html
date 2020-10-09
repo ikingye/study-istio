@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Envoy #  ">
+<meta name="description" content="Envoy #  线程模型 #  Envoy 使用单进程 - 多线程的架构模型。 一个 master 线程管理各种琐碎的任务，而一些 worker 线程则负责执行监听、过滤和转发。 当监听器接收到一个连接请求时，该连接将其生命周期绑定到一个单独的 worker 线程。 这使得 Envoy 主要使用大量单线程（ embarrassingly parallel ）处理工作，并且只有少量的复杂代码用于实现 worker 线程之间的协调工作。 通常情况下，Envoy 实现了 100% 的非阻塞。 对于大多数工作负载，我们建议将 worker 线程数配置为物理机器的线程数。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Envoy" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -14,7 +14,7 @@
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
-<script defer src="/study-istio/en.search.min.f8edbcaca46710245bdc4bef89598bd05c00ce47ca12662ab9a8234e2dd69060.js" integrity="sha256-&#43;O28rKRnECRb3EvviVmL0FwAzkfKEmYquagjTi3WkGA="></script>
+<script defer src="/study-istio/en.search.min.e344e7ad81df77b15839eaedea3bb46001da37526726a50008031e92e9a4a4dd.js" integrity="sha256-40TnrYHfd7FYOert6ju0YAHaN1JnJqUACAMekumkpN0="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
@@ -443,24 +443,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/code/envoy/" class="collapsed ">3.2 Envoy</a>
-  
-
-          
-  
-  
-  
-
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/code/source/" class="">3.9 源码分析</a>
+    <a href="/study-istio/docs/code/source/" class="">3.7 源码分析</a>
   
 
           
@@ -606,7 +589,11 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#线程模型">线程模型</a></li>
+  </ul>
+</nav>
 
 
   </aside>
@@ -620,6 +607,16 @@ https://github.com/alex-shpak/hugo-book
   Envoy
   <a class="anchor" href="#envoy">#</a>
 </h1>
+<h2 id="线程模型">
+  线程模型
+  <a class="anchor" href="#%e7%ba%bf%e7%a8%8b%e6%a8%a1%e5%9e%8b">#</a>
+</h2>
+<p>Envoy 使用<strong>单进程 - 多线程</strong>的架构模型。
+一个 master 线程管理各种琐碎的任务，而一些 worker 线程则负责执行监听、过滤和转发。
+当监听器接收到一个连接请求时，该连接将其生命周期绑定到一个单独的 worker 线程。
+这使得 Envoy 主要使用大量单线程（ embarrassingly parallel ）处理工作，并且只有少量的复杂代码用于实现 worker 线程之间的协调工作。
+通常情况下，Envoy 实现了 100% 的非阻塞。
+对于大多数工作负载，我们建议将 <strong>worker 线程数配置为物理机器的线程数</strong>。</p>
 </article>
  
       
@@ -665,7 +662,11 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#线程模型">线程模型</a></li>
+  </ul>
+</nav>
 
  
     </aside>
