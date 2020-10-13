@@ -10,6 +10,15 @@
     
     
     <item>
+      <title>Gloo</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/gloo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/gloo/</guid>
+      <description>Gloo #  solo-io/gloo The Feature-rich, Kubernetes-native, Next-Generation API Gateway Built on Envoy</description>
+    </item>
+    
+    <item>
       <title>Ambassador</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -25,15 +34,6 @@
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</guid>
       <description>MOSN #  mosn/mosn MOSN is a cloud native proxy for edge or service mesh. https://mosn.io</description>
-    </item>
-    
-    <item>
-      <title>Gloo</title>
-      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/gloo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/gloo/</guid>
-      <description>Gloo #  solo-io/gloo The Feature-rich, Kubernetes-native, Next-Generation API Gateway Built on Envoy</description>
     </item>
     
     <item>

@@ -113,11 +113,6 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</loc>
-    <lastmod>2020-09-18T15:49:24+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-istio/docs/basic/concept/api-resources/</loc>
     <lastmod>2020-07-22T15:03:15+08:00</lastmod>
   </url>
@@ -163,11 +158,6 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</loc>
-    <lastmod>2020-09-18T15:49:24+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/</loc>
     <lastmod>2020-09-18T15:49:24+08:00</lastmod>
   </url>
@@ -203,12 +193,26 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/apisix/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/prof/</loc>
     <lastmod>2020-07-14T22:13:27+08:00</lastmod>
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</loc>
+    <lastmod>2020-09-18T15:49:24+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/test/test/</loc>
+    <lastmod>2020-09-18T15:49:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</loc>
     <lastmod>2020-09-18T15:49:24+08:00</lastmod>
   </url>
   

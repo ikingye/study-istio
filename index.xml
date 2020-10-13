@@ -95,15 +95,6 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
     </item>
     
     <item>
-      <title>Ambassador</title>
-      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</guid>
-      <description>Ambassador #  datawire/ambassador Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy</description>
-    </item>
-    
-    <item>
       <title>Jaeger</title>
       <link>https://ikingye.github.io/study-istio/docs/basic/other/jaeger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -155,15 +146,6 @@ openzipkin/zipkin #  Zipkin is a distributed tracing system https://zipkin.</des
     </item>
     
     <item>
-      <title>MOSN</title>
-      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</guid>
-      <description>MOSN #  mosn/mosn MOSN is a cloud native proxy for edge or service mesh. https://mosn.io</description>
-    </item>
-    
-    <item>
       <title>xDS</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -203,12 +185,30 @@ openzipkin/zipkin #  Zipkin is a distributed tracing system https://zipkin.</des
     </item>
     
     <item>
+      <title>Ambassador</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</guid>
+      <description>Ambassador #  datawire/ambassador Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy</description>
+    </item>
+    
+    <item>
       <title>2.7 测试</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/test/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/test/test/</guid>
       <description>测试 #  open-policy-agent/conftest #  Write tests against structured configuration data using the Open Policy Agent Rego query language</description>
+    </item>
+    
+    <item>
+      <title>MOSN</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</guid>
+      <description>MOSN #  mosn/mosn MOSN is a cloud native proxy for edge or service mesh. https://mosn.io</description>
     </item>
     
     <item>

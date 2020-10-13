@@ -4,21 +4,18 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mixer 基础 #  Mixer 已弃用。
-Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。
-请参考 Telemetry V2，它取代了 Mixer 遥测。">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Mixer" />
-<meta property="og:description" content="Mixer 基础 #  Mixer 已弃用。
-Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。
-请参考 Telemetry V2，它取代了 Mixer 遥测。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/arch/components/mixer/" />
-<meta property="article:modified_time" content="2020-07-22T23:14:29+08:00" />
-<title>Mixer | Istio 学习笔记</title>
+<meta name="description" content="APISIX #  apache/apisix ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="APISIX" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/apisix/" />
+
+<title>APISIX | Istio 学习笔记</title>
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.d51ae1346c6c6be6d266ee675dbefadff112d8cb316f6b14f34def47903e2c63.css" integrity="sha256-1RrhNGxsa&#43;bSZu5nXb763/ES2Msxb2sU803vR5A&#43;LGM=">
 <script defer src="/study-istio/en.search.min.045aca2f4a3cc59775c199756f14f39418ffc8ca199e43c6826b9368678341b1.js" integrity="sha256-BFrKL0o8xZd1wZl1bxTzlBj/yMoZnkPGgmuTaGeDQbE="></script>
+<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/eco/apisix/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -137,71 +134,6 @@ https://github.com/alex-shpak/hugo-book
   
   
 
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/arch/components/" class="collapsed ">组件</a>
-  
-
-          
-  
-  
-  
-
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/arch/components/mixer/" class="active">Mixer</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/arch/components/pilot/" class="">Pilot</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/arch/components/citadel/" class="">Citadel</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/arch/components/galley/" class="">Galley</a>
-  
-
-        </li>
-      
-    
-  </ul>
-  
-
-        </li>
-      
-    
-  </ul>
   
 
         </li>
@@ -411,7 +343,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/eco/apisix/" class="">APISIX</a>
+    <a href="/study-istio/docs/advanced/eco/apisix/" class="active">APISIX</a>
   
 
           
@@ -639,7 +571,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Mixer</strong>
+  <strong>APISIX</strong>
 
   <label for="toc-control">
     
@@ -662,13 +594,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="mixer-基础">
-  Mixer 基础
-  <a class="anchor" href="#mixer-%e5%9f%ba%e7%a1%80">#</a>
+  <article class="markdown"><h1 id="apisix">
+  APISIX
+  <a class="anchor" href="#apisix">#</a>
 </h1>
-<p>Mixer 已弃用。</p>
-<p>Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer 的支持将截止到 Istio 1.7 发行版。</p>
-<p>请参考  <a href="https://istio.io/zh/docs/reference/config/telemetry">Telemetry V2</a>，它取代了 Mixer 遥测。</p>
+<p><a href="https://github.com/apache/apisix">apache/apisix</a> <img src="https://img.shields.io/github/stars/apache/apisix.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/apache/apisix.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/apache/apisix.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/apache/apisix.svg" alt="Last commit" /></p>
 </article>
  
       
@@ -678,12 +608,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/526b0044b91759004585b98d4300a418385accf6" title='Last modified by yewang | 2020-07-22' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-22</span>
-    </a>
-  </div>
 
 
 
