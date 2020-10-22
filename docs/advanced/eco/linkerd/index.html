@@ -4,18 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Istio CRD #  CRD List #     CRD API group 作用     meshpolicies authentication.istio.io    policies authentication.istio.io    adapters config.istio.io    attributemanifests config.istio.io    handlers config.istio.io    httpapispecbindings config.istio.io    httpapispecs config.istio.io    instances config.istio.io    quotaspecbindings config.istio.io    quotaspecs config.istio.io    rules config.">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Istio CRD" />
+<meta name="description" content="Linkerd #  linkerd/linkerd2 Ultralight, security-first service mesh for Kubernetes. Main repo for Linkerd 2.x. https://linkerd.io/
+linkerd/linkerd A service mesh for Kubernetes and beyond. Main repo for Linkerd 1.x. https://linkerd.io/">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Linkerd" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/concept/crd/" />
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/linkerd/" />
 
-<title>Istio CRD | Istio 学习笔记</title>
+<title>Linkerd | Istio 学习笔记</title>
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
 <script defer src="/study-istio/en.search.min.99d20b89485a8a3c219602df3846b14d74426ea789bd39f45106071bfd995c01.js" integrity="sha256-mdILiUhaijwhlgLfOEaxTXRCbqeJvTn0UQYHG/2ZXAE="></script>
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/basic/concept/crd/index.xml" title="Istio 学习笔记" />
+<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/eco/linkerd/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -117,52 +118,6 @@ https://github.com/alex-shpak/hugo-book
   
   
 
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/concept/crd/" class="active">Istio CRD</a>
-  
-
-          
-  
-  
-  
-
-  
-  <ul>
-    
-  </ul>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/concept/api-resources/" class="">API Resources</a>
-  
-
-          
-  
-  
-  
-
-  
-  <ul>
-    
-  </ul>
-  
-
-        </li>
-      
-    
-  </ul>
   
 
         </li>
@@ -358,7 +313,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/eco/linkerd/" class="">Linkerd</a>
+    <a href="/study-istio/docs/advanced/eco/linkerd/" class="active">Linkerd</a>
   
 
           
@@ -638,7 +593,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Istio CRD</strong>
+  <strong>Linkerd</strong>
 
   <label for="toc-control">
     
@@ -651,12 +606,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#crd-list">CRD List</a></li>
-    <li><a href="#pilot">Pilot</a></li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
 
   </aside>
@@ -666,197 +616,17 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="istio-crd">
-  Istio CRD
-  <a class="anchor" href="#istio-crd">#</a>
+  <article class="markdown"><h1 id="linkerd">
+  Linkerd
+  <a class="anchor" href="#linkerd">#</a>
 </h1>
-<h2 id="crd-list">
-  CRD List
-  <a class="anchor" href="#crd-list">#</a>
-</h2>
-<table>
-<thead>
-<tr>
-<th>CRD</th>
-<th>API group</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>meshpolicies</td>
-<td>authentication.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>policies</td>
-<td>authentication.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>adapters</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>attributemanifests</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>handlers</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>httpapispecbindings</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>httpapispecs</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>instances</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>quotaspecbindings</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>quotaspecs</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>rules</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>templates</td>
-<td>config.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>destinationrules</td>
-<td>networking.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>envoyfilters</td>
-<td>networking.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>gateways</td>
-<td>networking.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>serviceentries</td>
-<td>networking.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>sidecars</td>
-<td>networking.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>virtualservices</td>
-<td>networking.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>clusterrbacconfigs</td>
-<td>rbac.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>rbacconfigs</td>
-<td>rbac.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>servicerolebindings</td>
-<td>rbac.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>serviceroles</td>
-<td>rbac.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>authorizationpolicies</td>
-<td>security.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>peerauthentications</td>
-<td>security.istio.io</td>
-<td></td>
-</tr>
-<tr>
-<td>requestauthentications</td>
-<td>security.istio.io</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><code>kubectl get customresourcedefinitions</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200405155925.png" alt="" /></p>
-<hr>
-<h2 id="pilot">
-  Pilot
-  <a class="anchor" href="#pilot">#</a>
-</h2>
-<p>38 个，详见：<a href="https://github.com/istio/istio/blob/1.4.6/pilot/pkg/config/kube/crd/types.gen.go">pilot/pkg/config/kube/crd/types.gen.go</a></p>
-<pre><code>MockConfig
-MockConfigList
-VirtualService
-VirtualServiceList
-Gateway
-GatewayList
-ServiceEntry
-ServiceEntryList
-SyntheticServiceEntry
-SyntheticServiceEntryList
-DestinationRule
-DestinationRuleList
-EnvoyFilter
-EnvoyFilterList
-Sidecar
-SidecarList
-HTTPAPISpec
-HTTPAPISpecList
-HTTPAPISpecBinding
-HTTPAPISpecBindingList
-QuotaSpec
-QuotaSpecList
-QuotaSpecBinding
-QuotaSpecBindingList
-Policy
-PolicyList
-MeshPolicy
-MeshPolicyList
-ServiceRole
-ServiceRoleList
-ServiceRoleBinding
-ServiceRoleBindingList
-RbacConfig
-RbacConfigList
-ClusterRbacConfig
-ClusterRbacConfigList
-AuthorizationPolicy
-AuthorizationPolicyList
-</code></pre></article>
+<p><a href="https://github.com/linkerd/linkerd2">linkerd/linkerd2</a> <img src="https://img.shields.io/github/stars/linkerd/linkerd2.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/linkerd/linkerd2.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/linkerd/linkerd2.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/linkerd/linkerd2.svg" alt="Last commit" /></p>
+<p>Ultralight, security-first service mesh for Kubernetes. Main repo for Linkerd 2.x.
+<a href="https://linkerd.io/">https://linkerd.io/</a></p>
+<p><a href="https://github.com/linkerd/linkerd">linkerd/linkerd</a> <img src="https://img.shields.io/github/stars/linkerd/linkerd.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/linkerd/linkerd.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/linkerd/linkerd.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/linkerd/linkerd.svg" alt="Last commit" /></p>
+<p>A service mesh for Kubernetes and beyond. Main repo for Linkerd 1.x.
+<a href="https://linkerd.io/">https://linkerd.io/</a></p>
+</article>
  
       
 
@@ -865,12 +635,6 @@ AuthorizationPolicyList
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b80cf1906af05c9e625192f28e27bfd4e2732287" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-14</span>
-    </a>
-  </div>
 
 
 
@@ -914,12 +678,7 @@ AuthorizationPolicyList
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#crd-list">CRD List</a></li>
-    <li><a href="#pilot">Pilot</a></li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
  
     </aside>
