@@ -19,15 +19,6 @@
     </item>
     
     <item>
-      <title>Ambassador</title>
-      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ambassador/</guid>
-      <description>Ambassador #  datawire/ambassador Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy</description>
-    </item>
-    
-    <item>
       <title>MOSN</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/mosn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -43,6 +34,24 @@
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/dapr/</guid>
       <description>Dapr #  dapr/dapr Dapr is a portable, serverless, event-driven runtime that makes it easy for developers to build resilient, stateless and stateful microservices that run on the cloud and edge and embraces the diversity of languages and developer frameworks.</description>
+    </item>
+    
+    <item>
+      <title>Cilium</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/cilium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/cilium/</guid>
+      <description>Cilium #  cilium/cilium eBPF-based Networking, Security, and Observability</description>
+    </item>
+    
+    <item>
+      <title>SkyWalking</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/skywalking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/skywalking/</guid>
+      <description>SkyWalking #  apache/skywalking APM, Application Performance Monitoring System https://skywalking.apache.org/</description>
     </item>
     
   </channel>

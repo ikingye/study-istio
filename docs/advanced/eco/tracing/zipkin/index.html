@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Jaeger #  CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Jaeger" />
-<meta property="og:description" content="Jaeger #  CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/" />
+<meta name="description" content="Zipkin #  openzipkin/zipkin Zipkin is a distributed tracing system https://zipkin.io/">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Zipkin" />
+<meta property="og:description" content="Zipkin #  openzipkin/zipkin Zipkin is a distributed tracing system https://zipkin.io/" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/basic/other/jaeger/" />
-<meta property="article:modified_time" content="2020-07-14T22:13:27+08:00" />
-<title>Jaeger | Istio 学习笔记</title>
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/zipkin/" />
+
+<title>Zipkin | Istio 学习笔记</title>
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
-<script defer src="/study-istio/en.search.min.46be264a24709c5d9bd571c87451f5ed60aab307be111bd254776a3b66aeaef8.js" integrity="sha256-Rr4mSiRwnF2b1XHIdFH17WCqswe&#43;ERvSVHdqO2aurvg="></script>
+<script defer src="/study-istio/en.search.min.8aa4e25a60fc3d856d858005e739562b232c6f0a19f38b43784c5a6e3701420e.js" integrity="sha256-iqTiWmD8PYVthYAF5zlWKyMsbwoZ84tDeExabjcBQg4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -150,40 +150,6 @@ https://github.com/alex-shpak/hugo-book
   
   
 
-  
-  <ul>
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/other/jaeger/" class="active">Jaeger</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/other/zipkin/" class="">Jaeger</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/basic/other/version/" class="">版本</a>
-  
-
-        </li>
-      
-    
-  </ul>
   
 
         </li>
@@ -345,7 +311,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/eco/linkerd/" class="">Linkerd</a>
+    <a href="/study-istio/docs/advanced/eco/proxy/" class="">Proxy</a>
   
 
           
@@ -355,6 +321,221 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/proxy/linkerd/" class="">Linkerd</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/proxy/apisix/" class="">APISIX</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/proxy/kong/" class="">Kong</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/proxy/haproxy/" class="">haproxy</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/" class="">Ingress Controller</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/kong-ingress/" class="">Kong Ingress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/ambassador/" class="">Ambassador</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/traefik/" class="">Traefik</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/istio-ingress/" class="">Istio Ingress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/ingress-nginx/" class="">kubernetes/ingress-nginx</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/haproxy-ingress/" class="">Haproxy Ingress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/ingress/kubernetes-ingress/" class="">nginxinc/kubernetes-ingress</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/tracing/" class="">Distributed Tracing</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/tracing/jaeger/" class="">Jaeger</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/tracing/zipkin/" class="active">Zipkin</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/tracing/lightstep/" class="">LightStep</a>
+  
+
+        </li>
+      
     
   </ul>
   
@@ -376,58 +557,6 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/eco/apisix/" class="">APISIX</a>
-  
-
-          
-  
-  
-  
-
-  
-  <ul>
-    
-  </ul>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/advanced/eco/kong/" class="">Kong</a>
-  
-
-          
-  
-  
-  
-
-  
-  <ul>
-    
-  </ul>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/advanced/eco/ambassador/" class="">Ambassador</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
     <a href="/study-istio/docs/advanced/eco/mosn/" class="">MOSN</a>
   
 
@@ -439,6 +568,26 @@ https://github.com/alex-shpak/hugo-book
           
   
     <a href="/study-istio/docs/advanced/eco/dapr/" class="">Dapr</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/cilium/" class="">Cilium</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/skywalking/" class="">SkyWalking</a>
   
 
         </li>
@@ -625,7 +774,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Jaeger</strong>
+  <strong>Zipkin</strong>
 
   <label for="toc-control">
     
@@ -648,11 +797,13 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><a href="https://github.com/jaegertracing/jaeger">Jaeger</a> <h1 id="jaegerhttpsgithubcomjaegertracingjaeger-github-starshttpsimgshieldsiogithubstarsjaegertracingjaegersvg">
-  <img src="https://img.shields.io/github/stars/jaegertracing/jaeger.svg" alt="Github stars" />
-  <a class="anchor" href="#jaegerhttpsgithubcomjaegertracingjaeger-github-starshttpsimgshieldsiogithubstarsjaegertracingjaegersvg">#</a>
+  <article class="markdown"><h1 id="zipkin">
+  Zipkin
+  <a class="anchor" href="#zipkin">#</a>
 </h1>
-<p>CNCF Jaeger, a Distributed Tracing Platform <a href="https://www.jaegertracing.io/">https://www.jaegertracing.io/</a></p>
+<p><a href="https://github.com/openzipkin/zipkin">openzipkin/zipkin</a> <img src="https://img.shields.io/github/stars/openzipkin/zipkin.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/openzipkin/zipkin.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/openzipkin/zipkin.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/openzipkin/zipkin.svg" alt="Last commit" /></p>
+<p>Zipkin is a distributed tracing system
+<a href="https://zipkin.io/">https://zipkin.io/</a></p>
 </article>
  
       
@@ -662,12 +813,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/b80cf1906af05c9e625192f28e27bfd4e2732287" title='Last modified by yewang | 2020-07-14' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-14</span>
-    </a>
-  </div>
 
 
 

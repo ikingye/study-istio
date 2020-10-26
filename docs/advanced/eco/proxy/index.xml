@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on Istio 学习笔记</title>
+    <link>https://ikingye.github.io/study-istio/docs/advanced/eco/proxy/</link>
+    <description>Recent content in Proxy on Istio 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>haproxy</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/proxy/haproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/proxy/haproxy/</guid>
+      <description>Haproxy #  haproxy/haproxy HAProxy Load Balancer&amp;rsquo;s development branch (mirror of git.haproxy.org) https://git.haproxy.org/</description>
+    </item>
+    
+  </channel>
+</rss>

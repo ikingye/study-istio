@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ingress Controller on Istio 学习笔记</title>
+    <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/</link>
+    <description>Recent content in Ingress Controller on Istio 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kong Ingress</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/kong-ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/kong-ingress/</guid>
+      <description>Kong Ingress #  Kong/kubernetes-ingress-controller Kong for Kubernetes</description>
+    </item>
+    
+    <item>
+      <title>Ambassador</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/ambassador/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/ambassador/</guid>
+      <description>Ambassador #  datawire/ambassador Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy</description>
+    </item>
+    
+    <item>
+      <title>Traefik</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/traefik/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/traefik/</guid>
+      <description>Traefik #  traefik/traefik The Cloud Native Application Proxy https://traefik.io/</description>
+    </item>
+    
+    <item>
+      <title>Istio Ingress</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/istio-ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/istio-ingress/</guid>
+      <description>Istio Ingress #  </description>
+    </item>
+    
+    <item>
+      <title>kubernetes/ingress-nginx</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/ingress-nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/ingress-nginx/</guid>
+      <description>NGINX Ingress Controller #  kubernetes/ingress-nginx NGINX Ingress Controller for Kubernetes https://kubernetes.github.io/ingress-nginx/</description>
+    </item>
+    
+    <item>
+      <title>Haproxy Ingress</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/haproxy-ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/haproxy-ingress/</guid>
+      <description>Haproxy Ingress #  jcmoraisjr/haproxy-ingress #  jcmoraisjr/haproxy-ingress </description>
+    </item>
+    
+    <item>
+      <title>nginxinc/kubernetes-ingress</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/kubernetes-ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/kubernetes-ingress/</guid>
+      <description>NGINX Ingress Controller #  nginxinc/kubernetes-ingress NGINX and NGINX Plus Ingress Controllers for Kubernetes https://docs.nginx.com/nginx-ingress-controller/
+nginxinc/kubernetes-ingress vs kubernetes/ingress-nginx #  参考：
+ Differences Between nginxinc/kubernetes-ingress and kubernetes/ingress-nginx Ingress Controllers  </description>
+    </item>
+    
+  </channel>
+</rss>
