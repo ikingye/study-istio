@@ -15,7 +15,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/jaeger/</guid>
-      <description>Jaeger #  jaegertracing/jaeger CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
+      <description>Jaeger #  Jaeger \ˈyā-gər\
+jaegertracing/jaeger CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
+    </item>
+    
+    <item>
+      <title>SkyWalking</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/skywalking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/skywalking/</guid>
+      <description>SkyWalking #  apache/skywalking APM, Application Performance Monitoring System https://skywalking.apache.org/</description>
     </item>
     
     <item>

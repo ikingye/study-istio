@@ -73,7 +73,8 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/jaeger/</guid>
-      <description>Jaeger #  jaegertracing/jaeger CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
+      <description>Jaeger #  Jaeger \ˈyā-gər\
+jaegertracing/jaeger CNCF Jaeger, a Distributed Tracing Platform https://www.jaegertracing.io/</description>
     </item>
     
     <item>
@@ -131,15 +132,6 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
     </item>
     
     <item>
-      <title>Zipkin</title>
-      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/zipkin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/zipkin/</guid>
-      <description>Zipkin #  openzipkin/zipkin Zipkin is a distributed tracing system https://zipkin.io/</description>
-    </item>
-    
-    <item>
       <title>4.3 关注项目</title>
       <link>https://ikingye.github.io/study-istio/docs/appendix/attention/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -173,6 +165,15 @@ openzipkin/zipkin #  Zipkin is a distributed tracing system https://zipkin.</des
     </item>
     
     <item>
+      <title>SkyWalking</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/skywalking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/skywalking/</guid>
+      <description>SkyWalking #  apache/skywalking APM, Application Performance Monitoring System https://skywalking.apache.org/</description>
+    </item>
+    
+    <item>
       <title>xDS</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -189,6 +190,15 @@ openzipkin/zipkin #  Zipkin is a distributed tracing system https://zipkin.</des
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/gloo/</guid>
       <description>Gloo #  solo-io/gloo The Feature-rich, Kubernetes-native, Next-Generation API Gateway Built on Envoy</description>
+    </item>
+    
+    <item>
+      <title>Zipkin</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/zipkin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/zipkin/</guid>
+      <description>Zipkin #  openzipkin/zipkin Zipkin is a distributed tracing system https://zipkin.io/</description>
     </item>
     
     <item>
@@ -227,16 +237,6 @@ openzipkin/zipkin #  Zipkin is a distributed tracing system https://zipkin.</des
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/ingress/ingress-nginx/</guid>
       <description>NGINX Ingress Controller #  kubernetes/ingress-nginx NGINX Ingress Controller for Kubernetes https://kubernetes.github.io/ingress-nginx/</description>
-    </item>
-    
-    <item>
-      <title>LightStep</title>
-      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/lightstep/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/lightstep/</guid>
-      <description>LightStep #  https://lightstep.com/
-lightstep-tracer-go #  lightstep/lightstep-tracer-go </description>
     </item>
     
     <item>
@@ -285,6 +285,16 @@ lightstep-tracer-go #  lightstep/lightstep-tracer-go </description>
     </item>
     
     <item>
+      <title>LightStep</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/lightstep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/lightstep/</guid>
+      <description>LightStep #  https://lightstep.com/
+lightstep-tracer-go #  lightstep/lightstep-tracer-go </description>
+    </item>
+    
+    <item>
       <title>Cilium</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/cilium/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -302,15 +312,6 @@ lightstep-tracer-go #  lightstep/lightstep-tracer-go </description>
       <description>NGINX Ingress Controller #  nginxinc/kubernetes-ingress NGINX and NGINX Plus Ingress Controllers for Kubernetes https://docs.nginx.com/nginx-ingress-controller/
 nginxinc/kubernetes-ingress vs kubernetes/ingress-nginx #  参考：
  Differences Between nginxinc/kubernetes-ingress and kubernetes/ingress-nginx Ingress Controllers  </description>
-    </item>
-    
-    <item>
-      <title>SkyWalking</title>
-      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/skywalking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/skywalking/</guid>
-      <description>SkyWalking #  apache/skywalking APM, Application Performance Monitoring System https://skywalking.apache.org/</description>
     </item>
     
     <item>

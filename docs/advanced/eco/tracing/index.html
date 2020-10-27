@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Distributed Tracing #   jaegertracing/jaeger  openzipkin/zipkin   ">
+<meta name="description" content="Distributed Tracing #  opentracing Supported tracers
+ jaegertracing/jaeger  openzipkin/zipkin  LightStep Instana Apache SkyWalking inspectIT stagemonitor Datadog Wavefront by VMware Elastic APM  参考：
+ Dapper, a Large-Scale Distributed Systems Tracing Infrastructure  ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Distributed Tracing" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -14,7 +16,7 @@
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
-<script defer src="/study-istio/en.search.min.8aa4e25a60fc3d856d858005e739562b232c6f0a19f38b43784c5a6e3701420e.js" integrity="sha256-iqTiWmD8PYVthYAF5zlWKyMsbwoZ84tDeExabjcBQg4="></script>
+<script defer src="/study-istio/en.search.min.afd179ca976718228dfa0cac8fa061214c0e8aaec469f6c93bac24c2700f5098.js" integrity="sha256-r9F5ypdnGCKN&#43;gysj6BhIUwOiq7EafbJO6wkwnAPUJg="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/eco/tracing/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
@@ -522,6 +524,16 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
+    <a href="/study-istio/docs/advanced/eco/tracing/skywalking/" class="">SkyWalking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
     <a href="/study-istio/docs/advanced/eco/tracing/zipkin/" class="">Zipkin</a>
   
 
@@ -579,16 +591,6 @@ https://github.com/alex-shpak/hugo-book
           
   
     <a href="/study-istio/docs/advanced/eco/cilium/" class="">Cilium</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-    <a href="/study-istio/docs/advanced/eco/skywalking/" class="">SkyWalking</a>
   
 
         </li>
@@ -802,9 +804,22 @@ https://github.com/alex-shpak/hugo-book
   Distributed Tracing
   <a class="anchor" href="#distributed-tracing">#</a>
 </h1>
+<p>opentracing <a href="https://opentracing.io/docs/supported-tracers/">Supported tracers</a></p>
 <ul>
 <li><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a> <img src="https://img.shields.io/github/stars/jaegertracing/jaeger.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/jaegertracing/jaeger.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/jaegertracing/jaeger.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/jaegertracing/jaeger.svg" alt="Last commit" /></li>
 <li><a href="https://github.com/openzipkin/zipkin">openzipkin/zipkin</a> <img src="https://img.shields.io/github/stars/openzipkin/zipkin.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/openzipkin/zipkin.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/openzipkin/zipkin.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/openzipkin/zipkin.svg" alt="Last commit" /></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#lightstep">LightStep</a></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#instana">Instana</a></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#apache-skywalking">Apache SkyWalking</a></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#inspectit">inspectIT</a></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#stagemonitor">stagemonitor</a></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#datadog">Datadog</a></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#wavefront-by-vmware">Wavefront by VMware</a></li>
+<li><a href="https://opentracing.io/docs/supported-tracers/#elastic-apm">Elastic APM</a></li>
+</ul>
+<p>参考：</p>
+<ul>
+<li><a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/36356.pdf">Dapper, a Large-Scale Distributed Systems Tracing Infrastructure</a></li>
 </ul>
 </article>
  
@@ -815,6 +830,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/abf309919e5eb95136526b25ad2052e0eb9f87f9" title='Last modified by yewang | 2020-10-26' target="_blank" rel="noopener">
+      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-10-26</span>
+    </a>
+  </div>
 
 
 
