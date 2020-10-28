@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Envoy #  envoyproxy/envoy 线程模型 #  Envoy 使用单进程 - 多线程的架构模型。 一个 master 线程管理各种琐碎的任务，而一些 worker 线程则负责执行监听、过滤和转发。 当监听器接收到一个连接请求时，该连接将其生命周期绑定到一个单独的 worker 线程。 这使得 Envoy 主要使用大量单线程（ embarrassingly parallel ）处理工作，并且只有少量的复杂代码用于实现 worker 线程之间的协调工作。 通常情况下，Envoy 实现了 100% 的非阻塞。 对于大多数工作负载，我们建议将 worker 线程数配置为物理机器的线程数。">
+<meta name="description" content="Envoy #  envoyproxy/envoy 线程模型 #  Envoy 使用单进程 - 多线程的架构模型。 一个 master 线程管理各种琐碎的任务，而一些 worker 线程则负责执行监听、过滤和转发。 当监听器接收到一个连接请求时，该连接将其生命周期绑定到一个单独的 worker 线程。 这使得 Envoy 主要使用大量单线程（ embarrassingly parallel ）处理工作，并且只有少量的复杂代码用于实现 worker 线程之间的协调工作。 通常情况下，Envoy 实现了 100% 的非阻塞。 对于大多数工作负载，我们建议将 worker 线程数配置为物理机器的线程数。
+参考：
+ https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/intro/threading_model   BUILT ON ENVOY #   datawire/ambassador  cilium/cilium  Cloud Foundry hashicorp/consul  projectcontour/contour  saarasio/enroute  projectcontour/gimbal  solo-io/envoy-operator  tetratelabs/getenvoy  solo-io/gloo  istio/istio  kumahq/kuma  turbinelabs/rotor  solo-io/service-mesh-hub   参考：">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Envoy" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -14,7 +16,7 @@
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
-<script defer src="/study-istio/en.search.min.afd179ca976718228dfa0cac8fa061214c0e8aaec469f6c93bac24c2700f5098.js" integrity="sha256-r9F5ypdnGCKN&#43;gysj6BhIUwOiq7EafbJO6wkwnAPUJg="></script>
+<script defer src="/study-istio/en.search.min.07e635147d4c3d2c6f9ee6461d2a700d5c2f23391a170c6e0fdfc297094b8fa7.js" integrity="sha256-B&#43;Y1FH1MPSxvnuZGHSpwDVwvIzkaFwxuD9/ClwlLj6c="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
@@ -313,6 +315,57 @@ https://github.com/alex-shpak/hugo-book
     <a href="/study-istio/docs/advanced/eco/envoy/xds/" class="">xDS</a>
   
 
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/lds/" class="">LDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/cds/" class="">CDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/eds/" class="">EDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/rds/" class="">RDS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
         </li>
       
     
@@ -327,6 +380,33 @@ https://github.com/alex-shpak/hugo-book
       
     
   </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/nginx/" class="collapsed ">Nginx</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/openresty/" class="">OpenResty</a>
   
 
         </li>
@@ -612,7 +692,37 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
+    <a href="/study-istio/docs/advanced/eco/bfe/" class="">BFE</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
     <a href="/study-istio/docs/advanced/eco/cilium/" class="">Cilium</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/consul/" class="">Consul</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/traefik-mesh/" class="">Traefik Mesh</a>
   
 
         </li>
@@ -815,6 +925,7 @@ https://github.com/alex-shpak/hugo-book
   <nav id="TableOfContents">
   <ul>
     <li><a href="#线程模型">线程模型</a></li>
+    <li><a href="#built-on-envoy">BUILT ON ENVOY</a></li>
   </ul>
 </nav>
 
@@ -841,6 +952,35 @@ https://github.com/alex-shpak/hugo-book
 这使得 Envoy 主要使用大量单线程（ embarrassingly parallel ）处理工作，并且只有少量的复杂代码用于实现 worker 线程之间的协调工作。
 通常情况下，Envoy 实现了 100% 的非阻塞。
 对于大多数工作负载，我们建议将 <strong>worker 线程数配置为物理机器的线程数</strong>。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/intro/threading_model">https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/intro/threading_model</a></li>
+</ul>
+<hr>
+<h2 id="built-on-envoy">
+  BUILT ON ENVOY
+  <a class="anchor" href="#built-on-envoy">#</a>
+</h2>
+<ul>
+<li><a href="https://github.com/datawire/ambassador">datawire/ambassador</a> <img src="https://img.shields.io/github/stars/datawire/ambassador.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/datawire/ambassador.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/datawire/ambassador.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/datawire/ambassador.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/cilium/cilium">cilium/cilium</a> <img src="https://img.shields.io/github/stars/cilium/cilium.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/cilium/cilium.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/cilium/cilium.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/cilium/cilium.svg" alt="Last commit" /></li>
+<li>Cloud Foundry</li>
+<li><a href="https://github.com/hashicorp/consul">hashicorp/consul</a> <img src="https://img.shields.io/github/stars/hashicorp/consul.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/hashicorp/consul.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/hashicorp/consul.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/hashicorp/consul.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/projectcontour/contour">projectcontour/contour</a> <img src="https://img.shields.io/github/stars/projectcontour/contour.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/projectcontour/contour.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/projectcontour/contour.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/projectcontour/contour.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/saarasio/enroute">saarasio/enroute</a> <img src="https://img.shields.io/github/stars/saarasio/enroute.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/saarasio/enroute.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/saarasio/enroute.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/saarasio/enroute.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/projectcontour/gimbal">projectcontour/gimbal</a> <img src="https://img.shields.io/github/stars/projectcontour/gimbal.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/projectcontour/gimbal.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/projectcontour/gimbal.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/projectcontour/gimbal.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/solo-io/envoy-operator">solo-io/envoy-operator</a> <img src="https://img.shields.io/github/stars/solo-io/envoy-operator.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/solo-io/envoy-operator.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/solo-io/envoy-operator.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/solo-io/envoy-operator.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/tetratelabs/getenvoy">tetratelabs/getenvoy</a> <img src="https://img.shields.io/github/stars/tetratelabs/getenvoy.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/tetratelabs/getenvoy.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/tetratelabs/getenvoy.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/tetratelabs/getenvoy.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/solo-io/gloo">solo-io/gloo</a> <img src="https://img.shields.io/github/stars/solo-io/gloo.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/solo-io/gloo.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/solo-io/gloo.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/solo-io/gloo.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/istio/istio">istio/istio</a> <img src="https://img.shields.io/github/stars/istio/istio.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/istio/istio.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/istio/istio.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/istio/istio.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/kumahq/kuma">kumahq/kuma</a> <img src="https://img.shields.io/github/stars/kumahq/kuma.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/kumahq/kuma.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/kumahq/kuma.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/kumahq/kuma.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/turbinelabs/rotor">turbinelabs/rotor</a> <img src="https://img.shields.io/github/stars/turbinelabs/rotor.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/turbinelabs/rotor.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/turbinelabs/rotor.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/turbinelabs/rotor.svg" alt="Last commit" /></li>
+<li><a href="https://github.com/solo-io/service-mesh-hub">solo-io/service-mesh-hub</a> <img src="https://img.shields.io/github/stars/solo-io/service-mesh-hub.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/solo-io/service-mesh-hub.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/solo-io/service-mesh-hub.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/solo-io/service-mesh-hub.svg" alt="Last commit" /></li>
+</ul>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.envoyproxy.io/community">https://www.envoyproxy.io/community</a></li>
+</ul>
 </article>
  
       
@@ -902,6 +1042,7 @@ https://github.com/alex-shpak/hugo-book
   <nav id="TableOfContents">
   <ul>
     <li><a href="#线程模型">线程模型</a></li>
+    <li><a href="#built-on-envoy">BUILT ON ENVOY</a></li>
   </ul>
 </nav>
 
