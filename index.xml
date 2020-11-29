@@ -63,8 +63,7 @@ Mixer 所提供的功能已迁移至 Envoy 代理中。 在 Istio 中对 Mixer �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ikingye.github.io/study-istio/docs/appendix/tutorial/</guid>
-      <description>Istio 教程 #  基础 #  katacoda: 使用 istioctl 安装 istio
-进阶 #  </description>
+      <description>Istio 教程 #  基础 #   katacoda: 使用 istioctl 安装 istio 绿色记忆: Istio 学习笔记 绿色记忆: Istio Pilot 与 Envoy 的交互机制解读  进阶 #  </description>
     </item>
     
     <item>
