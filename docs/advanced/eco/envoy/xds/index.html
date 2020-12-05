@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="xDS #  CDS #  EDS #  LDS #  RDS #  参考：
+<meta name="description" content="xDS #  envoy 接口列表
+const auto methods = { &#34;envoy.api.v2.ClusterDiscoveryService.FetchClusters&#34;, &#34;envoy.api.v2.ClusterDiscoveryService.StreamClusters&#34;, &#34;envoy.api.v2.EndpointDiscoveryService.FetchEndpoints&#34;, &#34;envoy.api.v2.EndpointDiscoveryService.StreamEndpoints&#34;, &#34;envoy.api.v2.ListenerDiscoveryService.FetchListeners&#34;, &#34;envoy.api.v2.ListenerDiscoveryService.StreamListeners&#34;, &#34;envoy.api.v2.RouteDiscoveryService.FetchRoutes&#34;, &#34;envoy.api.v2.RouteDiscoveryService.StreamRoutes&#34;, &#34;envoy.service.discovery.v2.AggregatedDiscoveryService.StreamAggregatedResources&#34;, &#34;envoy.service.discovery.v2.HealthDiscoveryService.FetchHealthCheck&#34;, &#34;envoy.service.discovery.v2.HealthDiscoveryService.StreamHealthCheck&#34;, &#34;envoy.service.discovery.v2.RuntimeDiscoveryService.FetchRuntime&#34;, &#34;envoy.service.discovery.v2.RuntimeDiscoveryService.StreamRuntime&#34;, &#34;envoy.service.accesslog.v2.AccessLogService.StreamAccessLogs&#34;, &#34;envoy.service.metrics.v2.MetricsService.StreamMetrics&#34;, &#34;envoy.service.ratelimit.v2.RateLimitService.ShouldRateLimit&#34;, &#34;udpa.service.orca.v1.OpenRcaService.StreamCoreMetrics&#34;, }; CDS #  EDS #  LDS #  RDS #  参考：
  深入解读 Service Mesh 背后的技术细节  ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="xDS" />
 <meta property="og:description" content="" />
@@ -15,7 +16,7 @@
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
-<script defer src="/study-istio/en.search.min.5f7337f63be4c5f55ddd2c7b593e134bbf53a6ce20d9b7dca65a6f71ab2d93e7.js" integrity="sha256-X3M39jvkxfVd3Sx7WT4TS79Tps4g2bfcplpvcastk&#43;c="></script>
+<script defer src="/study-istio/en.search.min.c1160eedd37ae627093ddc3391965c2eb66d1ad0dfbd2af9a7094b0826f10ce4.js" integrity="sha256-wRYO7dN65icJPdwzkZZcLrZtGtDfvSr5pwlLCCbxDOQ="></script>
 <link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
@@ -942,7 +943,27 @@ https://github.com/alex-shpak/hugo-book
   xDS
   <a class="anchor" href="#xds">#</a>
 </h1>
-<h2 id="cds">
+<p><a href="https://github.com/envoyproxy/data-plane-api/blob/3b5fc66c78728b1ebd228515ede7c4b1f646da72/test/build/build_test.cc#L8">envoy 接口列表</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">  <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> methods <span style="color:#f92672">=</span> {
+      <span style="color:#e6db74">&#34;envoy.api.v2.ClusterDiscoveryService.FetchClusters&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.api.v2.ClusterDiscoveryService.StreamClusters&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.api.v2.EndpointDiscoveryService.FetchEndpoints&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.api.v2.EndpointDiscoveryService.StreamEndpoints&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.api.v2.ListenerDiscoveryService.FetchListeners&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.api.v2.ListenerDiscoveryService.StreamListeners&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.api.v2.RouteDiscoveryService.FetchRoutes&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.api.v2.RouteDiscoveryService.StreamRoutes&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.discovery.v2.AggregatedDiscoveryService.StreamAggregatedResources&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.discovery.v2.HealthDiscoveryService.FetchHealthCheck&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.discovery.v2.HealthDiscoveryService.StreamHealthCheck&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.discovery.v2.RuntimeDiscoveryService.FetchRuntime&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.discovery.v2.RuntimeDiscoveryService.StreamRuntime&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.accesslog.v2.AccessLogService.StreamAccessLogs&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.metrics.v2.MetricsService.StreamMetrics&#34;</span>,
+      <span style="color:#e6db74">&#34;envoy.service.ratelimit.v2.RateLimitService.ShouldRateLimit&#34;</span>,
+      <span style="color:#e6db74">&#34;udpa.service.orca.v1.OpenRcaService.StreamCoreMetrics&#34;</span>,
+  };
+</code></pre></div><h2 id="cds">
   CDS
   <a class="anchor" href="#cds">#</a>
 </h2>
