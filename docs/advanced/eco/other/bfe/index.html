@@ -27,7 +27,7 @@ BFE 最基本的工作就是从 BGW/BVS 接入流量并将流量转发给产品�
 反向代理服务器 #  BFE 本质上是一个反向代理服务器，每天承接百度数百亿的流量，高峰期的集群 QPS 有一百多万。 在如此大的流量压力环境中，服务器的处理性能至关重要。 BFE 采用现在业界流行的多进程全异步非阻塞事件驱动模型， 但由于业务功能繁多，产品线策略及规则复杂，任何一个开源的代理服务器比如 nginx, squid, varnish 的性能都很难满足需求。 BFE 本身也需要不断优化，降低系统资源开销，提升处理性能。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/other/bfe/" />
-
+<meta property="article:modified_time" content="2020-12-10T20:15:17+08:00" />
 <title>BFE | Istio 学习笔记</title>
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
@@ -1239,6 +1239,12 @@ BFE 的异常检测主要分析访问日志中出现的各种特征数据，判�
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/68533dec14406026e7f24698c94a7a16cfd7f941" title='Last modified by yewang | 2020-12-10' target="_blank" rel="noopener">
+      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-12-10</span>
+    </a>
+  </div>
 
 
 

@@ -89,10 +89,12 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/tracing/jaeger/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/kong-ingress/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -142,6 +144,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -156,6 +159,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/traefik/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -180,6 +184,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -194,10 +199,12 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/linkerd/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/tracing/skywalking/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -212,10 +219,12 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/tracing/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/gloo/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -225,6 +234,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/tracing/zipkin/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -244,18 +254,22 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/apisix/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/istio-ingress/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/kong/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ingress-nginx/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -265,14 +279,17 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/haproxy/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/haproxy-ingress/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/mosn/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -282,10 +299,12 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/dapr/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/tracing/lightstep/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -295,18 +314,22 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/bfe/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/cilium/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/consul/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/traefik-mesh/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -316,10 +339,12 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/kubernetes-ingress/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/</loc>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
@@ -338,7 +363,7 @@
   
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/</loc>
-    <lastmod>2020-12-07T15:07:32+08:00</lastmod>
+    <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
   
   <url>
