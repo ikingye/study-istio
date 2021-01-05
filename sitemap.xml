@@ -143,6 +143,10 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador-copy/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador/</loc>
     <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>

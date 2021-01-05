@@ -20,6 +20,15 @@
     
     <item>
       <title>Ambassador</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador-copy/</guid>
+      <description>Ambassador #  datawire/ambassador Open source Kubernetes-native API gateway for microservices built on the Envoy Proxy</description>
+    </item>
+    
+    <item>
+      <title>Ambassador</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
