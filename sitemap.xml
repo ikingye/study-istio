@@ -143,10 +143,6 @@
   </url>
   
   <url>
-    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador-copy/</loc>
-  </url>
-  
-  <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/ambassador/</loc>
     <lastmod>2020-12-10T20:15:17+08:00</lastmod>
   </url>
@@ -179,6 +175,10 @@
   <url>
     <loc>https://ikingye.github.io/study-istio/docs/appendix/attention/</loc>
     <lastmod>2020-10-26T20:36:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/other/ingress/contour/</loc>
   </url>
   
   <url>
