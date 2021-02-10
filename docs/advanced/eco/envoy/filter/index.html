@@ -4,17 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OpenResty #  openresty/openresty 参考：
- OpenResty 究竟解决了什么痛点？   教程 #  参考：
- Programming OpenResty - 章亦春 OpenResty 最佳实践  ">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="OpenResty" />
-<meta property="og:description" content="OpenResty #  openresty/openresty 参考：
- OpenResty 究竟解决了什么痛点？   教程 #  参考：
- Programming OpenResty - 章亦春 OpenResty 最佳实践  " />
+<meta name="description" content="Envoy filters #  Lua filter #  envoy-apisix #  api7/envoy-apisix A Lua framework that support Apache APISIX plugins run directly in Envoy Lua filter without modify Envoy.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Envoy filters" />
+<meta property="og:description" content="Envoy filters #  Lua filter #  envoy-apisix #  api7/envoy-apisix A Lua framework that support Apache APISIX plugins run directly in Envoy Lua filter without modify Envoy." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/openresty/" />
-<meta property="article:modified_time" content="2020-10-28T14:20:47+08:00" />
-<title>OpenResty | Istio 学习笔记</title>
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/filter/" />
+
+<title>Envoy filters | Istio 学习笔记</title>
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
@@ -307,6 +303,91 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/filter/" class="active">Envoy filters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/" class="">xDS</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/lds/" class="">LDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/cds/" class="">CDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/eds/" class="">EDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/rds/" class="">RDS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/version/" class="">版本</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
 
         </li>
       
@@ -332,7 +413,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/eco/openresty/" class="active">OpenResty</a>
+    <a href="/study-istio/docs/advanced/eco/openresty/" class="">OpenResty</a>
   
 
         </li>
@@ -536,7 +617,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>OpenResty</strong>
+  <strong>Envoy filters</strong>
 
   <label for="toc-control">
     
@@ -551,7 +632,11 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#教程">教程</a></li>
+    <li><a href="#lua-filter">Lua filter</a>
+      <ul>
+        <li><a href="#envoy-apisix">envoy-apisix</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -563,25 +648,20 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="openresty">
-  OpenResty
-  <a class="anchor" href="#openresty">#</a>
+  <article class="markdown"><h1 id="envoy-filters">
+  Envoy filters
+  <a class="anchor" href="#envoy-filters">#</a>
 </h1>
-<p><a href="https://github.com/openresty/openresty">openresty/openresty</a> <img src="https://img.shields.io/github/stars/openresty/openresty.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/openresty/openresty.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/openresty/openresty.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/openresty/openresty.svg" alt="Last commit" /></p>
-<p>参考：</p>
-<ul>
-<li><a href="https://www.zhihu.com/question/266535644">OpenResty 究竟解决了什么痛点？</a></li>
-</ul>
-<hr>
-<h2 id="教程">
-  教程
-  <a class="anchor" href="#%e6%95%99%e7%a8%8b">#</a>
+<h2 id="lua-filter">
+  Lua filter
+  <a class="anchor" href="#lua-filter">#</a>
 </h2>
-<p>参考：</p>
-<ul>
-<li><a href="https://openresty.gitbooks.io/programming-openresty/content/">Programming OpenResty - 章亦春</a></li>
-<li><a href="https://moonbingbing.gitbooks.io/openresty-best-practices">OpenResty 最佳实践</a></li>
-</ul>
+<h3 id="envoy-apisix">
+  envoy-apisix
+  <a class="anchor" href="#envoy-apisix">#</a>
+</h3>
+<p><a href="https://github.com/api7/envoy-apisix">api7/envoy-apisix</a> <img src="https://img.shields.io/github/stars/api7/envoy-apisix.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/api7/envoy-apisix.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/api7/envoy-apisix.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/api7/envoy-apisix.svg" alt="Last commit" /></p>
+<p>A Lua framework that support Apache APISIX plugins run directly in Envoy Lua filter without modify Envoy.</p>
 </article>
  
       
@@ -591,12 +671,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/7c0c9894540536aea016a395d537d85e51a644d0" title='Last modified by yewang | 2020-10-28' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-10-28</span>
-    </a>
-  </div>
 
 
 
@@ -650,7 +724,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#教程">教程</a></li>
+    <li><a href="#lua-filter">Lua filter</a>
+      <ul>
+        <li><a href="#envoy-apisix">envoy-apisix</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
