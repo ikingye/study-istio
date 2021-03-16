@@ -4,18 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="工具 #  ">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="2.2 工具" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/tool/" />
+<meta name="description" content="Envoy API #  API versioning guidelines #   UDPA #  Universal Data Plane API
+cncf/udpa Universal Data Plane API Working Group (UDPA-WG) Goal: The objective of the Universal Data Plane API Working Group (UDPA-WG) is to bring together parties across the industry interested in a common control and configuration API for data plane proxies and load balancers.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Envoy API" />
+<meta property="og:description" content="Envoy API #  API versioning guidelines #   UDPA #  Universal Data Plane API
+cncf/udpa Universal Data Plane API Working Group (UDPA-WG) Goal: The objective of the Universal Data Plane API Working Group (UDPA-WG) is to bring together parties across the industry interested in a common control and configuration API for data plane proxies and load balancers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/api/" />
 
-<title>2.2 工具 | Istio 学习笔记</title>
+<title>Envoy API | Istio 学习笔记</title>
 <link rel="manifest" href="/study-istio/manifest.json">
 <link rel="icon" href="/study-istio/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/study-istio/book.min.ce0f902f11a0f7675f61f65c2edd624054c6ccc1465f48c5761565b68b9daa75.css" integrity="sha256-zg&#43;QLxGg92dfYfZcLt1iQFTGzMFGX0jFdhVltoudqnU=">
 <script defer src="/study-istio/en.search.min.14221cf26e30a43e43b6ac99251b01c791b4fc158bedd9e0d8595450f8033e7e.js" integrity="sha256-FCIc8m4wpD5DtqyZJRsBx5G0/BWL7dng2FlUUPgDPn4="></script>
-<link rel="alternate" type="application/rss+xml" href="https://ikingye.github.io/study-istio/docs/advanced/tool/index.xml" title="Istio 学习笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -198,7 +199,7 @@ https://github.com/alex-shpak/hugo-book
         <li>
           
   
-    <a href="/study-istio/docs/advanced/tool/" class="active">2.2 工具</a>
+    <a href="/study-istio/docs/advanced/tool/" class="">2.2 工具</a>
   
 
           
@@ -303,6 +304,101 @@ https://github.com/alex-shpak/hugo-book
   
   
 
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/api/" class="active">Envoy API</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/filter/" class="">Envoy filters</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/" class="">xDS</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/lds/" class="">LDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/cds/" class="">CDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/eds/" class="">EDS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/xds/rds/" class="">RDS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-istio/docs/advanced/eco/envoy/version/" class="">版本</a>
+  
+
+        </li>
+      
+    
+  </ul>
   
 
         </li>
@@ -533,7 +629,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/study-istio/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>2.2 工具</strong>
+  <strong>Envoy API</strong>
 
   <label for="toc-control">
     
@@ -546,7 +642,12 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#api-versioning-guidelineshttpsgithubcomenvoyproxyenvoyblobv1171apiapi_versioningmd"><a href="https://github.com/envoyproxy/envoy/blob/v1.17.1/api/API_VERSIONING.md">API versioning guidelines</a></a></li>
+    <li><a href="#udpa">UDPA</a></li>
+  </ul>
+</nav>
 
 
   </aside>
@@ -556,10 +657,23 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="工具">
-  工具
-  <a class="anchor" href="#%e5%b7%a5%e5%85%b7">#</a>
+  <article class="markdown"><h1 id="envoy-api">
+  Envoy API
+  <a class="anchor" href="#envoy-api">#</a>
 </h1>
+<h2 id="api-versioning-guidelineshttpsgithubcomenvoyproxyenvoyblobv1171apiapi_versioningmd">
+  <a href="https://github.com/envoyproxy/envoy/blob/v1.17.1/api/API_VERSIONING.md">API versioning guidelines</a>
+  <a class="anchor" href="#api-versioning-guidelineshttpsgithubcomenvoyproxyenvoyblobv1171apiapi_versioningmd">#</a>
+</h2>
+<hr>
+<h2 id="udpa">
+  UDPA
+  <a class="anchor" href="#udpa">#</a>
+</h2>
+<p>Universal Data Plane API</p>
+<p><a href="https://github.com/cncf/udpa">cncf/udpa</a> <img src="https://img.shields.io/github/stars/cncf/udpa.svg" alt="Github stars" /> <img src="https://img.shields.io/github/languages/top/cncf/udpa.svg" alt="Language" /> <img src="https://img.shields.io/github/v/tag/cncf/udpa.svg?sort=semver" alt="Last Tag" /> <img src="https://img.shields.io/github/last-commit/cncf/udpa.svg" alt="Last commit" /></p>
+<p>Universal Data Plane API Working Group (UDPA-WG)
+Goal: The objective of the Universal Data Plane API Working Group (UDPA-WG) is to bring together parties across the industry interested in a common control and configuration API for data plane proxies and load balancers.</p>
 </article>
  
       
@@ -569,12 +683,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/ikingye/study-istio/commit/dfb9ff78be86298a2e33bee9b084de03adbfa072" title='Last modified by yewang | 2020-09-18' target="_blank" rel="noopener">
-      <img src="/study-istio/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-18</span>
-    </a>
-  </div>
 
 
 
@@ -626,7 +734,12 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#api-versioning-guidelineshttpsgithubcomenvoyproxyenvoyblobv1171apiapi_versioningmd"><a href="https://github.com/envoyproxy/envoy/blob/v1.17.1/api/API_VERSIONING.md">API versioning guidelines</a></a></li>
+    <li><a href="#udpa">UDPA</a></li>
+  </ul>
+</nav>
 
  
     </aside>

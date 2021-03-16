@@ -10,6 +10,16 @@
     
     
     <item>
+      <title>Envoy API</title>
+      <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/api/</guid>
+      <description>Envoy API #  API versioning guidelines #   UDPA #  Universal Data Plane API
+cncf/udpa Universal Data Plane API Working Group (UDPA-WG) Goal: The objective of the Universal Data Plane API Working Group (UDPA-WG) is to bring together parties across the industry interested in a common control and configuration API for data plane proxies and load balancers.</description>
+    </item>
+    
+    <item>
       <title>Envoy filters</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/filter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -25,7 +35,7 @@
       
       <guid>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/version/</guid>
       <description>Envoy 版本 #  参考： https://www.envoyproxy.io/docs/envoy/v1.15.0/version_history/version_history
-1.17 #  1.17.0 #  1.16 #  1.16.0 (2020-10-08) #   1.15 #  1.15.0 (2020-07-06) #   1.14 #  1.14.3 (2020-06-30) #  1.14.2 (2020-06-08) #  1.14.0 (2020-04-08) #   1.13 #  1.13.3 (2020-06-30) #  1.13.0 (2020-01-20) #   1.12 #  1.12.5 (2020-06-30) #  1.12.1 (2019-11-08) #   1.5 (2017-12-04) #   1.</description>
+1.17 #  1.17.1 #  1.17.0 #   1.16 #  1.16.2 #  1.16.0 (2020-10-08) #   1.15 #  1.15.0 (2020-07-06) #   1.14 #  1.14.3 (2020-06-30) #  1.14.2 (2020-06-08) #  1.14.0 (2020-04-08) #   1.13 #  1.13.3 (2020-06-30) #  1.13.0 (2020-01-20) #   1.12 #  1.12.5 (2020-06-30) #  1.</description>
     </item>
     
   </channel>

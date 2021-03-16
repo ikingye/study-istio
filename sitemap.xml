@@ -88,6 +88,10 @@
   </url>
   
   <url>
+    <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/api/</loc>
+  </url>
+  
+  <url>
     <loc>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/filter/</loc>
     <lastmod>2021-02-11T00:44:02+08:00</lastmod>
   </url>
