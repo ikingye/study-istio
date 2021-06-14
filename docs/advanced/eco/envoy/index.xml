@@ -4,11 +4,7 @@
     <title>Envoy on Istio 学习笔记</title>
     <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/</link>
     <description>Recent content in Envoy on Istio 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Envoy API</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/api/</link>

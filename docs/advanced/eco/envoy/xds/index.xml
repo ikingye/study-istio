@@ -4,11 +4,7 @@
     <title>xDS on Istio 学习笔记</title>
     <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/</link>
     <description>Recent content in xDS on Istio 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LDS</title>
       <link>https://ikingye.github.io/study-istio/docs/advanced/eco/envoy/xds/lds/</link>

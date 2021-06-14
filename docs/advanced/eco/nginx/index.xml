@@ -4,10 +4,6 @@
     <title>Nginx on Istio 学习笔记</title>
     <link>https://ikingye.github.io/study-istio/docs/advanced/eco/nginx/</link>
     <description>Recent content in Nginx on Istio 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator>
-    
-	<atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/nginx/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-istio/docs/advanced/eco/nginx/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
